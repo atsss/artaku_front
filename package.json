@@ -26,10 +26,13 @@
     ]
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "next": "latest",
+    "postcss": "^8.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.30.0"
+    "sass": "^1.30.0",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",

@@ -9,9 +9,9 @@ export interface Props {
 }
 
 export const Button: React.FC<Props> = ({ href, size = 'm', children, className }) => (
-  <div className={[style.body, style[size], className].join(' ')}>
-    <a className={style.link} href={href}>
+  <a className={style.link} href={href}>
+    <div className={[style.body, style[size], "bg-yellow-300", "hover:bg-yellow-200", className].join(' ')}>
       {children}
-    </a>
-  </div>
+    </div>
+  </a>
 )

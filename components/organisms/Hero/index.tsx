@@ -5,13 +5,13 @@ export const Hero = (): JSX.Element => (
   <main className={[style.body, "font-sans", "text-8xl", "leading-tight"].join(' ')}>
     <Section image="/img/hero.jpg">
       <div className={style.block}>
-        <div className="text-right">
+        <h1 className="text-right">
           <p>Your</p>
           <p>Unlimited</p>
           <p>Artworks</p>
           <p>Storage</p>
           <p>In New York</p>
-        </div>
+        </h1>
       </div>
     </Section>
   </main>

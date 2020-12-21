@@ -15,6 +15,8 @@ export const Home = (): JSX.Element => {
       <Head>
         <title>Cocchi</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={i18n[locale].description} />
+        <meta name="keywords" content={i18n[locale].keywords.join(', ')} />
       </Head>
       <Header />
       <Hero />

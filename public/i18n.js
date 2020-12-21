@@ -1,5 +1,8 @@
 export const i18n = {
   'en-US': {
+    description:
+      'Cocchi is art online platform, which is your unlimited artworks storage in New York. Cocchi alse provides you with oppotunities to sell your artworks.',
+    keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpice'],
     hero: 'In New York',
     sections: [
       {
@@ -23,6 +26,9 @@ export const i18n = {
     form: 'https://forms.gle/R2ZsZ3M6o4xyb17N6',
   },
   jp: {
+    description:
+      'Cocchi はアートのオンラインプラットフォームです。Cocchi では、無制限にあなたの作品を回収して、保管します。更に、Cocchi ではあなたの作品の販売もできます。',
+    keywords: ['美術作品', '保管', '倉庫', 'ポートフォリオ', '管理'],
     hero: 'In Tokyo',
     sections: [
       {

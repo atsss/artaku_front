@@ -2,7 +2,7 @@ import style from './style.module.sass'
 import { Section } from '../../atoms/Section'
 
 export const Hero = (): JSX.Element => (
-  <main className={[style.body, "font-sans", "text-8xl", "leading-tight"].join(' ')}>
+  <main className={style.body}>
     <Section image="/img/hero.jpg">
       <div className={style.block}>
         <h1 className="text-right">

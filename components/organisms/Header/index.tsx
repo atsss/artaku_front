@@ -12,7 +12,7 @@ export const Header = (): JSX.Element => {
     <header className={style.body}>
       <Section>
         <div className={style.block}>
-          <div className={style.title}>Cocchi</div>
+          <div className={style.title}>Artaku</div>
           <Button href={i18n[locale].form}>Apply now</Button>
         </div>
       </Section>

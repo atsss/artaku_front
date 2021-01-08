@@ -1,7 +1,7 @@
 export const i18n = {
   'en-US': {
     description:
-      'Cocchi is art online platform, which is your unlimited artworks storage in New York. Cocchi alse provides you with oppotunities to sell your artworks.',
+      'Artaku is art online platform, which is your unlimited artworks storage in New York. Artaku alse provides you with oppotunities to sell your artworks.',
     keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpice'],
     hero: 'In New York',
     sections: [
@@ -14,10 +14,10 @@ export const i18n = {
         title:
           'We will make your portfolio with professional photos of your art works',
         description:
-          'After we take your art works, we will take professional photos of them. Then we will make your personal page on Cocchi and upload them on it. You can use the personal page as your portfolio as well. You don’t have to spend time on making and updating your portfolio anymore!',
+          'After we take your art works, we will take professional photos of them. Then we will make your personal page on Artaku and upload them on it. You can use the personal page as your portfolio as well. You don’t have to spend time on making and updating your portfolio anymore!',
       },
       {
-        title: 'You can sell your art works through Cocchi',
+        title: 'You can sell your art works through Artaku',
         description:
           'We can match your art works and art lovers in New York better with machine learning. Firstly we will rent your art works to the art lovers. Then if they like your art works, they buy them and we pay you for the art works. You don’t need galleries because you can sell your art works here!',
       },
@@ -27,7 +27,7 @@ export const i18n = {
   },
   jp: {
     description:
-      'Cocchi はアートのオンラインプラットフォームです。Cocchi では、無制限にあなたの作品を回収して、保管します。更に、Cocchi ではあなたの作品の販売もできます。',
+      'Artaku はアートのオンラインプラットフォームです。Artaku では、無制限にあなたの作品を回収して、保管します。更に、Artaku ではあなたの作品の販売もできます。',
     keywords: ['美術作品', '保管', '倉庫', 'ポートフォリオ', '管理'],
     hero: 'In Tokyo',
     sections: [
@@ -39,7 +39,7 @@ export const i18n = {
       {
         title: 'プロの写真であなたの作品をデータ化し、ポートフォリオにします',
         description:
-          '作品を引き取った後、プロレベルの写真で作品を撮影します。その後、Cocchiにあなたの個人ページを作り、そこにアップロードします。個人ページはポートフォリオとしてもご利用いただけます。もうポートフォリオの作成や更新に時間をかける必要はありません。',
+          '作品を引き取った後、プロレベルの写真で作品を撮影します。その後、Artakuにあなたの個人ページを作り、そこにアップロードします。個人ページはポートフォリオとしてもご利用いただけます。もうポートフォリオの作成や更新に時間をかける必要はありません。',
       },
       {
         title: 'サービスを通して作品を売ることができます',

@@ -13,7 +13,7 @@ export const Footer = (): JSX.Element => {
       <Section color="#F1F1F1">
         <div className={style.block}>
           <p className={style.text}>{i18n[locale].footer}</p>
-          <Button href={i18n[locale].form} size="l" className="m-auto mt-12">Apply now</Button>
+          <Button href={i18n[locale].form} size="l" className="m-auto mt-10">Apply now</Button>
         </div>
       </Section>
     </footer>

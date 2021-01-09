@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { i18n } from '../public/i18n'
-import { Footer } from '../components/organisms/Footer'
-import { Header } from '../components/organisms/Header'
-import { Hero } from '../components/organisms/Hero'
-import { TwoColumn } from '../components/molecules/TwoColumn'
+import { i18n } from '../../public/i18n'
+import { Footer } from '../../components/organisms/Footer'
+import { Header } from '../../components/organisms/Header'
+import { Hero } from '../../components/organisms/Hero'
+import { TwoColumn } from '../../components/molecules/TwoColumn'
 
 export const Artist = (): JSX.Element => {
   const router = useRouter()

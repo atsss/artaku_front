@@ -28,7 +28,7 @@ export const i18n = {
     },
     user: {
       keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
-      hero: ['Carry', 'Your museum', 'Everywhere'],
+      hero: ['Carry', 'Your Museum', 'Everywhere'],
       sections: [
         {
           title:
@@ -45,7 +45,7 @@ export const i18n = {
         {
           title: 'You will create connection among art lovers ',
           description:
-            'We provide you with a place to appreciate art with other users who like the same pictures so that you can enjoy them more. There is a bulletin board to share your thoughts and a place for real-time voice conversations. With Artaku, you can have a longer and deeper appreciation of art with other users. We propose a new way to enjoy art in your home.',
+            'We provide you with a place to appreciate art with other users who like the same artworks so that you can enjoy them more. There is a group board to share your thoughts and a place for real-time voice conversations. With Artaku, you can have a longer and deeper appreciation of art with other users. We propose a new way to enjoy art in your home.',
         },
       ],
       footer: '$5 per week',

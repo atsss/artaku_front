@@ -78,5 +78,30 @@ export const i18n = {
       footer: '月額 20,000 円',
       form: 'https://forms.gle/eTXw68ZQXW1moiNr9',
     },
+    user: {
+      keywords: ['美術作品', 'レンタル', 'オリジナル', '東京', 'コミュニティ'],
+      hero: ['Carry', 'Your museum', 'Everywhere'],
+      sections: [
+        {
+          title:
+            'You will enjoy experience of online & offline art without any hassle',
+          description:
+            '機械学習を使って、あなたに最適の美術作品をオンラインでお届けします。気になる絵を見つけたら、トライアルでレンタルすることができます。更に気に入ったら、その作品を買うことができます。作品の郵送の心配は無用です。私達があなたの自宅まで届けます。更に、返却時には自宅に受け取りに伺います。Artaku はあなたのオンラインとオフラインの美術鑑賞の体験を、シームレスに繋ぎます。',
+        },
+        {
+          title:
+            'You will find upcoming talent instead of going to museums and galleries',
+          description:
+            '私達は無名で若いアーティストにフォーカスしています。まだ、どこでも見つからないような将来有望なアーティストの新しい表現をお届けします。もうあなたはわざわざ美術館やギャラリーに、新しい才能を見つけに行く必要はありません！',
+        },
+        {
+          title: 'You will create connection among art lovers ',
+          description:
+            '私達はあなたがより絵を楽しめるように、同じ絵を好きな他のユーザーとアート鑑賞をする場を提供します。感想を共有するための掲示板やリアルタイムの音声会話する場が用意されています。一人では一時の鑑賞で終わってしまいますが、Artaku を使うことでより長く深いアート鑑賞を他のユーザーとすることができます。私達は新しい絵の楽しみ方を提案します。',
+        },
+      ],
+      footer: '500 円/週',
+      form: 'https://forms.gle/CmPzwCnsw4Xdk2M99',
+    },
   },
 }

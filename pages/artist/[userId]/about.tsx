@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const Home = () => {
+const About = () => {
   const router = useRouter()
   const { userId } = router.query
 
@@ -26,11 +26,11 @@ const Home = () => {
       </section>
       <main>
         <section>
-          <div>Home</div>
+          <div>About | {userId}</div>
         </section>
       </main>
     </>
   )
 }
 
-export default Home
+export default About

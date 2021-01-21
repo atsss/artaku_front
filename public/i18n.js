@@ -28,7 +28,7 @@ export const i18n = {
     },
     user: {
       keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
-      hero: ['Carry', 'Your Museum', 'Everywhere'],
+      hero: ['Create Your', 'Home Gallery'],
       sections: [
         {
           title:
@@ -80,7 +80,7 @@ export const i18n = {
     },
     user: {
       keywords: ['美術作品', 'レンタル', 'オリジナル', '東京', 'コミュニティ'],
-      hero: ['Carry', 'Your museum', 'Everywhere'],
+      hero: ['Create Your', 'Home Gallery'],
       sections: [
         {
           title:

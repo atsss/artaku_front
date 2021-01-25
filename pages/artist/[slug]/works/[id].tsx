@@ -9,6 +9,9 @@ const WorkShow = () => {
   const router = useRouter()
   const { id } = router.query
   const work = getWork(id)
+
+  if(!work) return <p>Error</p>
+
   const userData = addHeaderInfo(data, work)
 
   return (

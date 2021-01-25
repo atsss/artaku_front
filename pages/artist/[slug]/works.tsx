@@ -19,7 +19,7 @@ const addHeaderInfo = (data) => {
   const description = `${data.slug} portfolio | Works`
   const keywords = [data.slug]
 
-  return ({...data, description, keywords})
+  return { ...data, description, keywords }
 }
 
 export default Works

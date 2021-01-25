@@ -7,11 +7,22 @@ interface Props {
   className?: string
 }
 
-export const Section: React.FC<Props> = ({ children, color, image, className }) => {
-  const backgroundStyle = { backgroundColor: color, backgroundImage: `url(${image})` }
+export const Section: React.FC<Props> = ({
+  children,
+  color,
+  image,
+  className,
+}) => {
+  const backgroundStyle = {
+    backgroundColor: color,
+    backgroundImage: `url(${image})`,
+  }
 
   return (
-    <section className={[style.container, className].join(' ')} style={backgroundStyle}>
+    <section
+      className={[style.container, className].join(' ')}
+      style={backgroundStyle}
+    >
       <div className={style.content}>{children}</div>
     </section>
   )

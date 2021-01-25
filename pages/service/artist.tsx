@@ -16,7 +16,10 @@ export const Artist = (): JSX.Element => {
         <title>Artaku</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={i18n[locale].description} />
-        <meta name="keywords" content={i18n[locale].artist.keywords.join(', ')} />
+        <meta
+          name="keywords"
+          content={i18n[locale].artist.keywords.join(', ')}
+        />
       </Head>
       <Header />
       <Hero />

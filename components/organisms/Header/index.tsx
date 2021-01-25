@@ -14,7 +14,11 @@ export const Header = (): JSX.Element => {
       <Section>
         <div className={style.block}>
           <div className={style.title}>Artaku</div>
-          <Button href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form}>Apply now</Button>
+          <Button
+            href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form}
+          >
+            Apply now
+          </Button>
         </div>
       </Section>
     </header>

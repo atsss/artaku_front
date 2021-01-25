@@ -18,9 +18,13 @@ const txtFactory = (role: string) => ({
   children,
 }: Props) => (
   <Tag
-    className={[style[role], style[size], style[weight], style[font], className].join(
-      ' '
-    )}
+    className={[
+      style[role],
+      style[size],
+      style[weight],
+      style[font],
+      className,
+    ].join(' ')}
   >
     {children}
   </Tag>

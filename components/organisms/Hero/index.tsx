@@ -14,7 +14,9 @@ export const Hero = (): JSX.Element => {
       <Section image="/img/hero.jpg">
         <div className={style.block}>
           <h1 className="text-right">
-            {texts.map((text: string, index: number) => <p key={index}>{text}</p>)}
+            {texts.map((text: string, index: number) => (
+              <p key={index}>{text}</p>
+            ))}
           </h1>
         </div>
       </Section>

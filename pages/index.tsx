@@ -17,7 +17,10 @@ export const Home = (): JSX.Element => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={i18n[locale].description} />
         <meta name="keywords" content={i18n[locale].user.keywords.join(', ')} />
-        <meta name="google-site-verification" content="ie20WsfJ9Mu7IQr6MYFJv7PdHfN-wnq8dl0s8z4TIUw" />
+        <meta
+          name="google-site-verification"
+          content="ie20WsfJ9Mu7IQr6MYFJv7PdHfN-wnq8dl0s8z4TIUw"
+        />
       </Head>
       <Header />
       <Hero />

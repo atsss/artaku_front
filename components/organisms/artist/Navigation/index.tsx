@@ -9,19 +9,19 @@ export const Navigation: React.FC<Props> = ({user}) => (
     <Txt tag="h1" size="l" font="sans">{user.name}</Txt>
     <nav className="flex flex-col">
       {/* <Txt size="s" font="sans" className="mt-2"> */}
-      {/*   <Link href={`/artist/${user.userId}`}>Home</Link> */}
+      {/*   <Link href={`/artist/${user.slug}`}>Home</Link> */}
       {/* </Txt> */}
       <Txt size="s" font="sans" className="mt-2">
-        <Link href={`/artist/${user.userId}/about`}>About</Link>
+        <Link href={`/artist/${user.slug}/about`}>About</Link>
       </Txt>
       <Txt size="s" font="sans" className="mt-2">
-        <Link href={`/artist/${user.userId}/works`}>Works</Link>
+        <Link href={`/artist/${user.slug}/works`}>Works</Link>
       </Txt>
       {/* <Txt size="s" font="sans" className="mt-2"> */}
-      {/*   <Link href={`/artist/${user.userId}/events`}>Events</Link> */}
+      {/*   <Link href={`/artist/${user.slug}/events`}>Events</Link> */}
       {/* </Txt> */}
       {/* <Txt size="s" font="sans" className="mt-2"> */}
-      {/*   <Link href={`/artist/${user.userId}/contact`}>Contact</Link> */}
+      {/*   <Link href={`/artist/${user.slug}/contact`}>Contact</Link> */}
       {/* </Txt> */}
     </nav>
   </>

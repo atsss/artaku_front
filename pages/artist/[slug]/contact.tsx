@@ -4,21 +4,21 @@ import { data } from '../../../public/data'
 
 const Contact = () => {
   const router = useRouter()
-  const { userId } = router.query
+  const { slug } = router.query
   const userData = addHeaderInfo(data)
 
   return (
     <Layout user={userData}>
       <section>
-        <div>Contact | {userId}</div>
+        <div>Contact | {slug}</div>
       </section>
     </Layout>
   )
 }
 
 const addHeaderInfo = (data) => {
-  const description = `${data.userId} portfolio | Contact`
-  const keywords = [data.userId]
+  const description = `${data.slug} portfolio | Contact`
+  const keywords = [data.slug]
 
   return ({...data, description, keywords})
 }

@@ -1,5 +1,5 @@
 export const data = {
-  userId: 'ats',
+  slug: 'ats',
   name: 'Atsushi Ito',
   image: '/samples/profile01.jpg',
   descriptions: [

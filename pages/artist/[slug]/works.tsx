@@ -5,7 +5,7 @@ import { data } from '../../../public/data'
 
 const Works = () => {
   // const router = useRouter()
-  // const { userId } = router.query
+  // const { slug } = router.query
   const userData = addHeaderInfo(data)
 
   return (
@@ -18,8 +18,8 @@ const Works = () => {
 }
 
 const addHeaderInfo = (data) => {
-  const description = `${data.userId} portfolio | Works`
-  const keywords = [data.userId]
+  const description = `${data.slug} portfolio | Works`
+  const keywords = [data.slug]
 
   return ({...data, description, keywords})
 }

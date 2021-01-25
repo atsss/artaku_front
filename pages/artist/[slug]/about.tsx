@@ -16,9 +16,7 @@ const About = () => {
         <div className="flex justify-center">
           <Image src={userData.image} width={500} height={500} />
         </div>
-        {userData.descriptions.map((description, index) => (
-          <Txt key={index} font='serif' className="mt-4">{description}</Txt>
-        ))}
+        {userData.descriptions.map((description, index) => <Txt key={index} font="serif" className="mt-4">{description}</Txt>)}
       </Section>
     </Layout>
   )

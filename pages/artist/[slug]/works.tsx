@@ -1,5 +1,5 @@
 // import { useRouter } from 'next/router'
-import { WorkLists } from '../../../components/molecules/WorkLists'
+import { WorkLists } from '../../../components/organisms/artist/WorkLists'
 import { Layout } from '../../../components/organisms/artist/Layout'
 import { data } from '../../../public/data'
 

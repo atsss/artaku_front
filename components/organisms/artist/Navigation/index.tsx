@@ -14,13 +14,13 @@ export const Navigation: React.FC<Props> = ({userId}) => (
       <Txt size="s" font="sans">
         <Link href={`/artist/${userId}/about`}>About</Link>
       </Txt>
-      <Txt size="s" font="sans">
+      <Txt size="s" font="sans" className="mt-2">
         <Link href={`/artist/${userId}/works`}>Works</Link>
       </Txt>
-      {/* <Txt size="s" font="sans"> */}
+      {/* <Txt size="s" font="sans" className="mt-2"> */}
       {/*   <Link href={`/artist/${userId}/events`}>Events</Link> */}
       {/* </Txt> */}
-      {/* <Txt size="s" font="sans"> */}
+      {/* <Txt size="s" font="sans" className="mt-2"> */}
       {/*   <Link href={`/artist/${userId}/contact`}>Contact</Link> */}
       {/* </Txt> */}
     </nav>

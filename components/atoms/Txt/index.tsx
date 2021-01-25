@@ -4,6 +4,7 @@ export interface Props {
   tag?: keyof JSX.IntrinsicElements
   size?: string
   weight?: string
+  font?: 'serif' | 'sans'
   children: React.ReactNode
   className?: string
 }
@@ -12,11 +13,12 @@ const txtFactory = (role: string) => ({
   tag: Tag = 'p',
   size = 'm',
   weight = 'normal',
+  font = 'serif',
   className,
   children,
 }: Props) => (
   <Tag
-    className={[style[role], style[size], style[weight], className].join(
+    className={[style[role], style[size], style[weight], style[font], className].join(
       ' '
     )}
   >

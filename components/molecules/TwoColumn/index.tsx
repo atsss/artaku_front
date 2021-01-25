@@ -22,8 +22,8 @@ export const TwoColumn: React.FC<Props> = ({ src, title, description, isReversed
         />
       </div>
       <div>
-        <Txt tag="h2" weight="bold">{title}</Txt>
-        <SubTxt size="s" className="mt-4">{description}</SubTxt>
+        <Txt tag="h2" size="l" weight="bold" font="sans">{title}</Txt>
+        <SubTxt className="mt-4">{description}</SubTxt>
       </div>
     </div>
   </Section>

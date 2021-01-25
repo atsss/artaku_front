@@ -17,7 +17,7 @@ export const Layout: React.FC<Props> = ({user, children}) => (
     </Head>
     <div className="flex">
       <aside className="w-1/4 p-6">
-        <Navigation userId={user.userId} />
+        <Navigation user={user} />
       </aside>
       <main className={[style.main, "w-3/4", "p-6"].join(' ')}>{children}</main>
     </div>

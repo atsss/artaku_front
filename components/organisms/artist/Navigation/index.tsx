@@ -2,26 +2,26 @@
 import Link from 'next/link'
 import { Txt } from '../../../atoms/Txt'
 
-interface Props { userId: number }
+interface Props { user: any  } // FIXME
 
-export const Navigation: React.FC<Props> = ({userId}) => (
+export const Navigation: React.FC<Props> = ({user}) => (
   <>
-    <h1>{userId}</h1>
+    <Txt tag="h1" size="l" font="sans">{user.name}</Txt>
     <nav className="flex flex-col">
-      {/* <Txt size="s" font="sans"> */}
-      {/*   <Link href={`/artist/${userId}`}>Home</Link> */}
+      {/* <Txt size="s" font="sans" className="mt-2"> */}
+      {/*   <Link href={`/artist/${user.userId}`}>Home</Link> */}
       {/* </Txt> */}
-      <Txt size="s" font="sans">
-        <Link href={`/artist/${userId}/about`}>About</Link>
+      <Txt size="s" font="sans" className="mt-2">
+        <Link href={`/artist/${user.userId}/about`}>About</Link>
       </Txt>
       <Txt size="s" font="sans" className="mt-2">
-        <Link href={`/artist/${userId}/works`}>Works</Link>
+        <Link href={`/artist/${user.userId}/works`}>Works</Link>
       </Txt>
       {/* <Txt size="s" font="sans" className="mt-2"> */}
-      {/*   <Link href={`/artist/${userId}/events`}>Events</Link> */}
+      {/*   <Link href={`/artist/${user.userId}/events`}>Events</Link> */}
       {/* </Txt> */}
       {/* <Txt size="s" font="sans" className="mt-2"> */}
-      {/*   <Link href={`/artist/${userId}/contact`}>Contact</Link> */}
+      {/*   <Link href={`/artist/${user.userId}/contact`}>Contact</Link> */}
       {/* </Txt> */}
     </nav>
   </>

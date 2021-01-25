@@ -10,9 +10,7 @@ const Works = () => {
 
   return (
     <Layout user={userData}>
-      <section>
-        <WorkLists works={userData.works} />
-      </section>
+      <WorkLists works={userData.works} />
     </Layout>
   )
 }

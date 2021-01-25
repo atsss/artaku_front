@@ -4,7 +4,7 @@ import { Section } from '../../../atoms/Section'
 import { WorkList } from '../../../molecules/WorkList'
 
 export interface Props {
-  slug: string
+  slug: string | string[]
   works: any // FIXME
 }
 

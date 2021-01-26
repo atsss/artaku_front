@@ -3,24 +3,24 @@ export const i18n = {
     description:
       'Artaku is art online platform, which is your unlimited artworks storage in New York. Artaku alse provides you with oppotunities to sell your artworks.',
     artist: {
-      keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpice'],
+      keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpiece'],
       hero: ['Your', 'Unlimited', 'Artworks', 'Storage', 'In New York'],
       sections: [
         {
-          title: 'We will keep your countless art works instead of you',
+          title: 'We will keep your countless artworks instead of you',
           description:
-            'All you have to do is call us! Then we’ll take your art works and keep them instead of you. The number of art works is unlimited. Whenever you want to store your art works, you can call. That’s it! You don’t have to be worried about where to store them.',
+            'All you have to do is call us! Then we’ll take your artworks and keep them instead of you. The number of artworks is unlimited. Whenever you want to store your artworks, you can call. That’s it! You don’t have to be worried about where to store them.',
         },
         {
           title:
-            'We will make your portfolio with professional photos of your art works',
+            'We will make your portfolio with professional photos of your artworks',
           description:
-            'After we take your art works, we will take professional photos of them. Then we will make your personal page on Artaku and upload them on it. You can use the personal page as your portfolio as well. You don’t have to spend time on making and updating your portfolio anymore!',
+            'After we take your artworks, we will take professional photos of them. Then we will make your personal page on Artaku and upload them on it. You can use the personal page as your portfolio as well. You don’t have to spend time on making and updating your portfolio anymore!',
         },
         {
-          title: 'You can sell your art works through Artaku',
+          title: 'You can sell your artworks through Artaku',
           description:
-            'We can match your art works and art lovers in New York better with machine learning. Firstly we will rent your art works to the art lovers. Then if they like your art works, they buy them and we pay you for the art works. You don’t need galleries because you can sell your art works here!',
+            'We can match your artworks and art lovers in New York better with machine learning. Firstly we will rent your artworks to the art lovers. Then if they like your artworks, they buy them and we pay you for the artworks. You don’t need galleries because you can sell your artworks here!',
         },
       ],
       footer: '$200 per month',

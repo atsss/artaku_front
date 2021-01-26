@@ -28,13 +28,13 @@ export const i18n = {
     },
     user: {
       keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
-      hero: ['Create Your', 'Home Gallery'],
+      hero: ['Create Your', 'Home Gallery', 'In New York'],
       sections: [
         {
           title:
             'You will enjoy experience of online & offline art without any hassle',
           description:
-            "We use machine learning to bring you the best artworks online for you. If you find a painting that interests you, you can rent it as a trial. If you like it even more, you can buy the artwork. You don't have to worry about shipping the artwork. We will deliver the work to your home. Moreover, we will take it from your home when you return it. Artaku seamlessly connects your online and offline art appreciating experience.",
+            "We use machine learning to bring you the best artworks online for you. If you find a painting that interests you, you can rent it as a trial. If you like it even more, you can buy the artworks. You don't have to worry about shipping the artworks. We will deliver the artworks to your home. Moreover, we will take it from your home when you return it. Artaku seamlessly connects your online and offline art appreciating experience.",
         },
         {
           title:
@@ -80,7 +80,7 @@ export const i18n = {
     },
     user: {
       keywords: ['美術作品', 'レンタル', 'オリジナル', '東京', 'コミュニティ'],
-      hero: ['Create Your', 'Home Gallery'],
+      hero: ['Create Your', 'Home Gallery', 'In New York'],
       sections: [
         {
           title:

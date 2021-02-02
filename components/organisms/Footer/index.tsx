@@ -21,9 +21,6 @@ export const Footer = (): JSX.Element => {
               src={isArtist ? i18n[locale].artist.embeddedForm.src : i18n[locale].user.embeddedForm.src}
               width="640"
               height={isArtist ? i18n[locale].artist.embeddedForm.height : i18n[locale].user.embeddedForm.height}
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
             >
               Loading…
             </iframe>

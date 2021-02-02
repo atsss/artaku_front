@@ -16,13 +16,25 @@ export const Footer = (): JSX.Element => {
           <p className={style.text}>
             {isArtist ? i18n[locale].artist.footer : i18n[locale].user.footer}
           </p>
-          <Button
-            href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form}
-            size="l"
-            className="m-auto mt-10"
-          >
-            Apply now
-          </Button>
+          <div className="flex justify-center">
+            <iframe
+              src={isArtist ? i18n[locale].artist.embeddedForm.src : i18n[locale].user.embeddedForm.src}
+              width="640"
+              height={isArtist ? i18n[locale].artist.embeddedForm.height : i18n[locale].user.embeddedForm.height}
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
+          {/* <Button */}
+          {/*   href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form} */}
+          {/*   size="l" */}
+          {/*   className="m-auto mt-10" */}
+          {/* > */}
+          {/*   Apply now */}
+          {/* </Button> */}
         </div>
       </Section>
     </footer>

@@ -25,6 +25,10 @@ export const i18n = {
       ],
       footer: '$200 per month',
       form: 'https://forms.gle/R2ZsZ3M6o4xyb17N6',
+      embeddedForm: {
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
+        height: '1654',
+      },
     },
     user: {
       keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
@@ -50,6 +54,10 @@ export const i18n = {
       ],
       footer: '$5 per week',
       form: 'https://forms.gle/CmPzwCnsw4Xdk2M99',
+      embeddedForm: {
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
+        height: '2209',
+      },
     },
   },
   jp: {
@@ -77,6 +85,10 @@ export const i18n = {
       ],
       footer: '月額 20,000 円',
       form: 'https://forms.gle/eTXw68ZQXW1moiNr9',
+      embeddedForm: {
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
+        height: '1654',
+      },
     },
     user: {
       keywords: ['美術作品', 'レンタル', 'オリジナル', '東京', 'コミュニティ'],
@@ -102,6 +114,10 @@ export const i18n = {
       ],
       footer: '500 円/週',
       form: 'https://forms.gle/CmPzwCnsw4Xdk2M99',
+      embeddedForm: {
+        src: 'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
+        height: '2209',
+      },
     },
   },
 }

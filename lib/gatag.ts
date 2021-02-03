@@ -1,16 +1,16 @@
 export const GaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
 
-// IDが取得できない場合を想定する
+// assume system can't get the ga id
 export const existsGaId = GaId !== ''
 
-// PVを測定する
+// messure pv
 export const pageview = (path) => {
   window.gtag('config', GaId, {
     page_path: path,
   })
 }
 
-// GAイベントを発火させる
+// send event
 export const event = ({ action, category, label, value = '' }) => {
   if (!existsGaId) {
     return

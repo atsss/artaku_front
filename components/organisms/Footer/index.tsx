@@ -18,9 +18,17 @@ export const Footer = (): JSX.Element => {
           </p>
           <div className="flex justify-center">
             <iframe
-              src={isArtist ? i18n[locale].artist.embeddedForm.src : i18n[locale].user.embeddedForm.src}
+              src={
+                isArtist
+                  ? i18n[locale].artist.embeddedForm.src
+                  : i18n[locale].user.embeddedForm.src
+              }
               width="640"
-              height={isArtist ? i18n[locale].artist.embeddedForm.height : i18n[locale].user.embeddedForm.height}
+              height={
+                isArtist
+                  ? i18n[locale].artist.embeddedForm.height
+                  : i18n[locale].user.embeddedForm.height
+              }
             >
               Loading…
             </iframe>

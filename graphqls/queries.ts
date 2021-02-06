@@ -20,3 +20,21 @@ export const GET_ARTIST = gql`
     }
   }
 `
+
+export const GET_ARTWORK = gql`
+  query Artwork($id: ID!) {
+    artwork(id: $id) {
+      id
+      title
+      thumbnailUrl
+      description
+      size
+      paintingMethod
+      completedAt
+      author {
+        name
+        slug
+      }
+    }
+  }
+`

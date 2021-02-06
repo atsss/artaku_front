@@ -1,32 +1,38 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useQuery } from '@apollo/client'
 import { Section } from '../../../../components/atoms/Section'
 import { Txt, SubTxt } from '../../../../components/atoms/Txt'
 import { Layout } from '../../../../components/organisms/artist/Layout'
-import { data } from '../../../../public/data'
+import { GET_ARTWORK } from '../../../../graphqls/queries'
 
 const WorkShow = () => {
   const router = useRouter()
   const { id } = router.query
-  const work = getWork(id)
 
-  if (!work) return <p>Error</p>
+  const { loading, error, data } = useQuery(GET_ARTWORK, {
+    variables: { id },
+  })
 
-  const userData = addHeaderInfo(data, work)
+  if (loading) return <p>Loading ...</p>
+  if (error) return <div>Error</div>
+
+  const work = data.artwork
+  const user = work.author
 
   return (
-    <Layout user={userData}>
+    <Layout user={user} metaData={metaData(user, work)}>
       <Section color="#FAFAFA">
         <Txt size="l" font="sans">
           {work.title}
         </Txt>
         <SubTxt size="s">{work.completedAt}</SubTxt>
         <div className="mt-8">
-          <Image src={work.image} width={500} height={500} />
+          <Image src={work.thumbnailUrl} width={500} height={500} />
         </div>
         <Txt className="mt-8">{work.description}</Txt>
         <div className="mt-8">
-          <SubTxt size="s">Material: {work.material}</SubTxt>
+          <SubTxt size="s">Material: {work.paintingMethod}</SubTxt>
           <SubTxt size="s">Size: {work.size}</SubTxt>
         </div>
       </Section>
@@ -34,13 +40,11 @@ const WorkShow = () => {
   )
 }
 
-const getWork = (id) => data.works.find((element) => element.id == id)
+const metaData = (user, work) => {
+  const description = `${user.name} | ${work.title}`
+  const keywords = [user.name, work.title]
 
-const addHeaderInfo = (data, work) => {
-  const description = `${data.name} | ${work.title}`
-  const keywords = [data.name, work.title]
-
-  return { ...data, description, keywords }
+  return { description, keywords }
 }
 
 export default WorkShow

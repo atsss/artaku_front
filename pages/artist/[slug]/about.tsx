@@ -17,15 +17,15 @@ const About = () => {
   if (loading) return <p>Loading ...</p>
   if (error) return <div>Error</div>
 
-  const userData = addHeaderInfo(data.artist)
+  const user = data.artist
 
   return (
-    <Layout user={userData}>
+    <Layout user={user} metaData={metaData(user)}>
       <Section color="#FAFAFA">
         <div className="flex justify-center">
-          <Image src={userData.imageUrl} width={500} height={500} />
+          <Image src={user.imageUrl} width={500} height={500} />
         </div>
-        {userData.descriptions.map((description, index) => (
+        {user.descriptions.map((description, index) => (
           <Txt key={index} font="serif" className="mt-4">
             {description}
           </Txt>
@@ -35,11 +35,11 @@ const About = () => {
   )
 }
 
-const addHeaderInfo = (data) => {
-  const description = `${data.slug} portfolio | About`
-  const keywords = [data.slug]
+const metaData = (user) => {
+  const description = `${user.slug} portfolio | About`
+  const keywords = [user.slug]
 
-  return { ...data, description, keywords }
+  return { description, keywords }
 }
 
 export default About

@@ -15,20 +15,20 @@ const Works = () => {
   if (loading) return <p>Loading ...</p>
   if (error) return <div>Error</div>
 
-  const userData = addHeaderInfo(data.artist)
+  const user = data.artist
 
   return (
-    <Layout user={userData}>
-      <WorkLists slug={slug} works={userData.artworks} />
+    <Layout user={user} metaData={metaData(user)}>
+      <WorkLists slug={slug} works={user.artworks} />
     </Layout>
   )
 }
 
-const addHeaderInfo = (data) => {
-  const description = `${data.slug} portfolio | Works`
-  const keywords = [data.slug]
+const metaData = (user) => {
+  const description = `${user.slug} portfolio | Works`
+  const keywords = [user.slug]
 
-  return { ...data, description, keywords }
+  return { description, keywords }
 }
 
 export default Works

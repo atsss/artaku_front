@@ -1,10 +1,11 @@
 // import style from './style.module.sass'
 import Link from 'next/link'
 import { Txt } from '../../../atoms/Txt'
+import { User } from '../../../../interfaces'
 
 interface Props {
-  user: any
-} // FIXME
+  user: User
+}
 
 export const Navigation: React.FC<Props> = ({ user }) => (
   <>

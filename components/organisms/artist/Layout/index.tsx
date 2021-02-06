@@ -1,22 +1,27 @@
 import Head from 'next/head'
 import style from './style.module.sass'
 import { Navigation } from '../Navigation'
+import { User } from '../../../../interfaces'
 
 interface Props {
-  user: any // FIXME
+  user: User
+  metaData: {
+    description?: string
+    keywords?: string[]
+  }
   children: React.ReactNode
 }
 
-export const Layout: React.FC<Props> = ({ user, children }) => (
+export const Layout: React.FC<Props> = ({ user, metaData, children }) => (
   <>
     <Head>
       <title>Artaku</title>
       <link rel="icon" href="/favicon.ico" />
-      {user.description && (
-        <meta name="description" content={user.description} />
+      {metaData.description && (
+        <meta name="description" content={metaData.description} />
       )}
-      {user.keywords && (
-        <meta name="keywords" content={user.keywords.join(', ')} />
+      {metaData.keywords && (
+        <meta name="keywords" content={metaData.keywords.join(', ')} />
       )}
     </Head>
     <div className="flex">

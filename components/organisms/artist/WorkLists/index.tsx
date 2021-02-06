@@ -2,10 +2,11 @@
 import Link from 'next/link'
 import { Section } from '../../../atoms/Section'
 import { WorkList } from '../../../molecules/WorkList'
+import { Artwork } from '../../../../interfaces'
 
 export interface Props {
   slug: string | string[]
-  works: any // FIXME
+  works: Artwork[]
 }
 
 const List = ({ slug, work }) => (
@@ -13,9 +14,9 @@ const List = ({ slug, work }) => (
     <Link href={`/artist/${slug}/works/${work.id}`}>
       <a>
         <WorkList
-          src={work.image}
+          src={work.thumbnailUrl}
           title={work.title}
-          material={work.material}
+          material={work.paintingMethod}
         />
       </a>
     </Link>

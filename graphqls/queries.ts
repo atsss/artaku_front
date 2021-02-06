@@ -11,8 +11,11 @@ export const GET_ARTIST = gql`
       artworks {
         id
         title
-        completedAt
+        thumbnailUrl
         description
+        size
+        paintingMethod
+        completedAt
       }
     }
   }

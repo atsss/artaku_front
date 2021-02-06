@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/client'
 import { Section } from '../../../components/atoms/Section'
 import { Txt } from '../../../components/atoms/Txt'
 import { Layout } from '../../../components/organisms/artist/Layout'
-// import { data } from '../../../public/data'
 import { GET_ARTIST } from '../../../graphqls/queries'
 
 const About = () => {

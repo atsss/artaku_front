@@ -1,7 +1,8 @@
 export const data = {
+  id: 623,
   slug: 'ats',
   name: 'Atsushi Ito',
-  image: '/samples/profile01.jpg',
+  imageUrl: '/samples/profile01.jpg',
   descriptions: [
     'Art is an exploration of truth that is not limited to human activities, but also encompasses the entire universe.',
     'It is a cross-disciplinary practice of science and philosophy that is expressed through various media.',

@@ -3,7 +3,7 @@ export interface User {
   slug: string
   name: string
   imageUrl: string
-  description: string
+  descriptions: string
 }
 
 export interface Artwork {

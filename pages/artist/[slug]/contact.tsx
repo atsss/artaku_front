@@ -5,10 +5,9 @@ import { data } from '../../../public/data'
 const Contact = () => {
   const router = useRouter()
   const { slug } = router.query
-  const userData = addHeaderInfo(data)
 
   return (
-    <Layout user={userData}>
+    <Layout user={data} metaData={metaData(data)}>
       <section>
         <div>Contact | {slug}</div>
       </section>
@@ -16,11 +15,11 @@ const Contact = () => {
   )
 }
 
-const addHeaderInfo = (data) => {
+const metaData = (data) => {
   const description = `${data.slug} portfolio | Contact`
   const keywords = [data.slug]
 
-  return { ...data, description, keywords }
+  return { description, keywords }
 }
 
 export default Contact

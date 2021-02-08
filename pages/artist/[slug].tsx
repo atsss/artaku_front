@@ -5,10 +5,9 @@ import { data } from '../../public/data'
 const Home = () => {
   const router = useRouter()
   const { slug } = router.query
-  const userData = addHeaderInfo(data)
 
   return (
-    <Layout user={userData}>
+    <Layout user={data} metaData={metaData(data)}>
       <section>
         <div>Home | {slug}</div>
       </section>
@@ -16,11 +15,11 @@ const Home = () => {
   )
 }
 
-const addHeaderInfo = (data) => {
+const metaData = (data) => {
   const description = `${data.slug} portfolio | Home`
   const keywords = [data.slug]
 
-  return { ...data, description, keywords }
+  return { description, keywords }
 }
 
 export default Home

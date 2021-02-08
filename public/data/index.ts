@@ -11,7 +11,7 @@ export const data = {
     'My body and mind are catalysts to synthesize both nothing and everything in an effort to evoke emptiness and create a mirror that reflects the ways in which humanity lives in such a space.',
     'My work is influenced by my experience growing up with synesthesia (the visualization of music and sound), as well as the Japanese sense of beauty, in which a primary focus on space creates harmony between chaos and order.'
   ],
-  works: [
+  artworks: [
     { id: 1, title: 'title01', completedAt: '10/Dec/2020', description: 'description01', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting01.jpg' },
     { id: 2, title: 'title02', completedAt: '10/Dec/2020', description: 'description02', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting02.jpg' },
     { id: 3, title: 'title03', completedAt: '10/Dec/2020', description: 'description03', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting03.jpg' },

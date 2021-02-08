@@ -12,10 +12,10 @@ export const data = {
     'My work is influenced by my experience growing up with synesthesia (the visualization of music and sound), as well as the Japanese sense of beauty, in which a primary focus on space creates harmony between chaos and order.'
   ],
   artworks: [
-    { id: 1, title: 'title01', completedAt: '10/Dec/2020', description: 'description01', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting01.jpg' },
-    { id: 2, title: 'title02', completedAt: '10/Dec/2020', description: 'description02', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting02.jpg' },
-    { id: 3, title: 'title03', completedAt: '10/Dec/2020', description: 'description03', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting03.jpg' },
-    { id: 4, title: 'title04', completedAt: '10/Dec/2020', description: 'description04', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting04.jpg' },
-    { id: 5, title: 'title05', completedAt: '10/Dec/2020', description: 'description05', material: 'Pencil on panel', size: '2910×910mm', image: '/samples/painting05.jpg' },
+    { id: 1, title: 'title01', completedAt: '10/Dec/2020', description: 'description01', paintingMethod: 'Pencil on panel', size: '2910×910mm', thumbnailUrl: '/samples/painting01.jpg' },
+    { id: 2, title: 'title02', completedAt: '10/Dec/2020', description: 'description02', paintingMethod: 'Pencil on panel', size: '2910×910mm', thumbnailUrl: '/samples/painting02.jpg' },
+    { id: 3, title: 'title03', completedAt: '10/Dec/2020', description: 'description03', paintingMethod: 'Pencil on panel', size: '2910×910mm', thumbnailUrl: '/samples/painting03.jpg' },
+    { id: 4, title: 'title04', completedAt: '10/Dec/2020', description: 'description04', paintingMethod: 'Pencil on panel', size: '2910×910mm', thumbnailUrl: '/samples/painting04.jpg' },
+    { id: 5, title: 'title05', completedAt: '10/Dec/2020', description: 'description05', paintingMethod: 'Pencil on panel', size: '2910×910mm', thumbnailUrl: '/samples/painting05.jpg' },
   ]
 }

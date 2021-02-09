@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <Layout user={user} metaData={metaData(user)}>
-      <Section color="#FAFAFA">
+      <Section isGray>
         <div className="flex justify-center">
           <Image src={user.imageUrl} width={500} height={500} />
         </div>

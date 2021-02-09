@@ -11,7 +11,7 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer>
-      <Section color="#F1F1F1">
+      <Section isGray>
         <div className={style.block}>
           <p className={style.text}>
             {isArtist ? i18n[locale].artist.footer : i18n[locale].user.footer}

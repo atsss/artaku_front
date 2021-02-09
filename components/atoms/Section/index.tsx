@@ -3,16 +3,20 @@ import style from './style.module.sass'
 interface Props {
   children: React.ReactNode
   color?: string
+  isGray?: boolean
   image?: string
   className?: string
 }
 
 export const Section: React.FC<Props> = ({
   children,
-  color,
+  color = null,
+  isGray = false,
   image,
   className,
 }) => {
+  if(isGray && !color) color = "#FAFAFA"
+
   const backgroundStyle = {
     backgroundColor: color,
     backgroundImage: `url(${image})`,

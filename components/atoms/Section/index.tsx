@@ -15,7 +15,7 @@ export const Section: React.FC<Props> = ({
   image,
   className,
 }) => {
-  if(isGray && !color) color = "#FAFAFA"
+  if (isGray && !color) color = '#FAFAFA'
 
   const backgroundStyle = {
     backgroundColor: color,

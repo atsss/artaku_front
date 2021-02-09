@@ -28,7 +28,9 @@ export const Layout: React.FC<Props> = ({ user, metaData, children }) => (
       <aside className="md:w-1/4 w-full p-6">
         <Navigation user={user} />
       </aside>
-      <main className={[style.main, 'md:w-3/4', 'w-full', 'p-6'].join(' ')}>{children}</main>
+      <main className={[style.main, 'md:w-3/4', 'w-full', 'p-6'].join(' ')}>
+        {children}
+      </main>
     </div>
   </>
 )

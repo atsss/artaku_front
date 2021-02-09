@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client'
 import { Section } from '../../../../components/atoms/Section'
 import { Txt, SubTxt } from '../../../../components/atoms/Txt'
 import { Layout } from '../../../../components/organisms/artist/Layout'
+import { ProcessLists } from '../../../../components/organisms/artist/ProcessLists'
 import { GET_ARTWORK } from '../../../../graphqls/queries'
 
 const WorkShow = () => {
@@ -19,11 +20,12 @@ const WorkShow = () => {
 
   const work = data.artwork
   const user = work.author
+  const processes = work.processes
 
   return (
     <Layout user={user} metaData={metaData(user, work)}>
-      <Section color="#FAFAFA">
-        <Txt size="l" font="sans">
+      <Section isGray>
+        <Txt tag="h2" size="l" font="sans">
           {work.title}
         </Txt>
         <SubTxt size="s">{work.completedAt}</SubTxt>
@@ -36,6 +38,7 @@ const WorkShow = () => {
           <SubTxt size="s">Size: {work.size}</SubTxt>
         </div>
       </Section>
+      {processes && <ProcessLists processes={processes} />}
     </Layout>
   )
 }

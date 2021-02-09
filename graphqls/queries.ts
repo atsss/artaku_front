@@ -38,8 +38,8 @@ export const GET_ARTWORK = gql`
       processes {
         id
         descriptions
-        summaryVideoUrl
-        videoUrls
+        summaryVideoId
+        videoIds
         imageUrls
         doneAt
       }

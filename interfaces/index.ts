@@ -21,8 +21,8 @@ export interface Artwork {
 export interface Process {
   id: number
   descriptions?: string[]
-  summaryVideoUrl?: string
+  summaryVideoId?: string
   imageUrls?: string[]
-  videoUrls?: string[]
+  videoIds?: string[]
   doneAt: string
 }

@@ -9,7 +9,7 @@ export interface Props {
 
 export const WorkList: React.FC<Props> = ({ src, title, material }) => (
   <>
-    <Image src={src} width={500} height={500} />
+    <Image src={src} width={600} height={400} />
     <Txt size="s" font="sans">
       {title}
     </Txt>

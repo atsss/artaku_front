@@ -30,7 +30,7 @@ const WorkShow = () => {
         </Txt>
         <SubTxt size="s">{work.completedAt}</SubTxt>
         <div className="mt-8">
-          <Image src={work.thumbnailUrl} width={500} height={500} />
+          <Image src={work.thumbnailUrl} width={600} height={400} />
         </div>
         <Txt className="mt-8">{work.description}</Txt>
         <div className="mt-8">

@@ -15,4 +15,14 @@ export interface Artwork {
   size: string
   paintingMethod: string
   completedAt: string
+  processes?: Process[]
+}
+
+export interface Process {
+  id: number
+  descriptions?: string[]
+  summaryVideoUrl?: string
+  imageUrls?: string[]
+  videoUrls?: string[]
+  doneAt: string
 }

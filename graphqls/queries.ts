@@ -35,6 +35,14 @@ export const GET_ARTWORK = gql`
         name
         slug
       }
+      processes {
+        id
+        descriptions
+        summaryVideoUrl
+        videoUrls
+        imageUrls
+        doneAt
+      }
     }
   }
 `

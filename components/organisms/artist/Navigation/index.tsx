@@ -12,14 +12,14 @@ export const Navigation: React.FC<Props> = ({ user }) => (
     <Txt tag="h1" size="l" font="sans">
       {user.name}
     </Txt>
-    <nav className="flex flex-col">
+    <nav className="flex md:flex-col md:mt-4 flex-row mt-2">
       {/* <Txt size="s" font="sans" className="mt-2"> */}
       {/*   <Link href={`/artist/${user.slug}`}>Home</Link> */}
       {/* </Txt> */}
       <Txt size="s" font="sans" className="mt-2">
         <Link href={`/artist/${user.slug}/about`}>About</Link>
       </Txt>
-      <Txt size="s" font="sans" className="mt-2">
+      <Txt size="s" font="sans" className="mt-2 ml-6 md:ml-0">
         <Link href={`/artist/${user.slug}/works`}>Works</Link>
       </Txt>
       {/* <Txt size="s" font="sans" className="mt-2"> */}

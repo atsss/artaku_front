@@ -28,7 +28,7 @@ const WorkShow = () => {
         <Txt tag="h2" size="l" font="sans">
           {work.title}
         </Txt>
-        <SubTxt size="s">{work.completedAt}</SubTxt>
+        <SubTxt size="s">{work.completedAt || 'Working in progress'}</SubTxt>
         <div className="mt-8">
           <Image src={work.thumbnailUrl} width={600} height={400} />
         </div>

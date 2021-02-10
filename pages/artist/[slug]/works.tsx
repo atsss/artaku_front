@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { WorkLists } from '../../../components/organisms/artist/WorkLists'
 import { useQuery } from '@apollo/client'
+import { Loading } from '../../../components/atoms/Loading'
 import { Layout } from '../../../components/organisms/artist/Layout'
 import { GET_ARTIST } from '../../../graphqls/queries'
 
@@ -12,7 +13,7 @@ const Works = () => {
     variables: { slug },
   })
 
-  if (loading) return <p>Loading ...</p>
+  if (loading) return <Loading />
   if (error) return <div>Error</div>
 
   const user = data.artist

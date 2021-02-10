@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useQuery } from '@apollo/client'
+import { Loading } from '../../../components/atoms/Loading'
 import { Section } from '../../../components/atoms/Section'
 import { Txt } from '../../../components/atoms/Txt'
 import { Layout } from '../../../components/organisms/artist/Layout'
@@ -14,7 +15,7 @@ const About = () => {
     variables: { slug },
   })
 
-  if (loading) return <p>Loading ...</p>
+  if (loading) return <Loading />
   if (error) return <div>Error</div>
 
   const user = data.artist

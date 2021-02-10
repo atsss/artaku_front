@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { i18n } from '../../public/i18n'
+import { FadeInOut } from '../../components/atoms/FadeInOut'
 import { Footer } from '../../components/organisms/Footer'
 import { Header } from '../../components/organisms/Header'
 import { Hero } from '../../components/organisms/Hero'
@@ -11,7 +12,7 @@ export const User = (): JSX.Element => {
   const { locale } = router
 
   return (
-    <>
+    <FadeInOut>
       <Head>
         <title>Artaku</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,7 +42,7 @@ export const User = (): JSX.Element => {
         className="mt-16 mb-16"
       />
       <Footer />
-    </>
+    </FadeInOut>
   )
 }
 

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import style from './style.module.sass'
+import { FadeInOut } from '../../../atoms/FadeInOut'
 import { Navigation } from '../Navigation'
 import { User } from '../../../../interfaces'
 
@@ -13,7 +14,7 @@ interface Props {
 }
 
 export const Layout: React.FC<Props> = ({ user, metaData, children }) => (
-  <>
+  <FadeInOut>
     <Head>
       <title>Artaku</title>
       <link rel="icon" href="/favicon.ico" />
@@ -32,5 +33,5 @@ export const Layout: React.FC<Props> = ({ user, metaData, children }) => (
         {children}
       </main>
     </div>
-  </>
+  </FadeInOut>
 )

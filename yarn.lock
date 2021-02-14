@@ -6102,6 +6102,11 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-use-websocket@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-use-websocket/-/react-use-websocket-2.4.1.tgz#e44c2caa2cd87d29a7d80eb8172db32119ac81a5"
+  integrity sha512-6Zlxz/t8ptvhKggEO/U4KBFFX71RuzR5vTuFbB46NyoALjL0WOU0Hc/SUPghyFTXXJAnF2nr7u/dsAyiBIbi1Q==
+
 react@^16.13.1:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"

@@ -3,8 +3,8 @@ import style from './style.module.sass'
 
 export const Loading = (): JSX.Element => (
   <div className={style.main}>
-    <div className={style.block} >
-     {[...Array(3)].map((_, index) => (
+    <div className={style.block}>
+      {[...Array(3)].map((_, index) => (
         <motion.span
           key={index}
           style={ballStyle}
@@ -27,7 +27,7 @@ const ballStyle = {
   borderRadius: '0.5rem',
 }
 
-const bounceTransition = index => {
+const bounceTransition = (index) => {
   return {
     y: {
       duration: 0.8,

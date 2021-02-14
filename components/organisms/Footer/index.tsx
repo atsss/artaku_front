@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import { i18n } from '../../../public/i18n'
 import style from './style.module.sass'
 import { Section } from '../../atoms/Section'
-import { Button } from '../../atoms/Button'
 
 export const Footer = (): JSX.Element => {
   const router = useRouter()
@@ -33,13 +32,6 @@ export const Footer = (): JSX.Element => {
               Loading…
             </iframe>
           </div>
-          {/* <Button */}
-          {/*   href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form} */}
-          {/*   size="l" */}
-          {/*   className="m-auto mt-10" */}
-          {/* > */}
-          {/*   Apply now */}
-          {/* </Button> */}
         </div>
       </Section>
     </footer>

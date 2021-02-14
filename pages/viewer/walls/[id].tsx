@@ -8,7 +8,7 @@ const WallShow = (): JSX.Element => {
   const router = useRouter()
   const { id } = router.query
 
-  const socketUrl = 'ws://localhost:50272/cable'
+  const socketUrl = process.env.NEXT_PUBLIC_WEBSOCKET_URL
   const subscribeParams = {
     command: 'subscribe',
     identifier: `{"channel":"WallsChannel", "id": ${id}}`,

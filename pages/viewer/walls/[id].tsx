@@ -8,7 +8,7 @@ const WallShow = (): JSX.Element => {
   const socketUrl = 'ws://localhost:50272/cable'
   const subscribeParams = {
     command: 'subscribe',
-    identifier: '{"channel":"WallsChannel"}',
+    identifier: '{"channel":"WallsChannel", "id": 1}',
   }
   const { sendJsonMessage, lastMessage, readyState } = useWebSocket(socketUrl)
 

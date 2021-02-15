@@ -1,11 +1,9 @@
 import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
 import { Loading } from '../../../../components/atoms/Loading'
-import { Section } from '../../../../components/atoms/Section'
-import { Txt, SubTxt } from '../../../../components/atoms/Txt'
 import { Layout } from '../../../../components/organisms/artist/Layout'
-import { ImgWithModal } from '../../../../components/molecules/ImgWithModal'
 import { ProcessLists } from '../../../../components/organisms/artist/ProcessLists'
+import { WorkSummary } from '../../../../components/organisms/artist/WorkSummary'
 import { GET_ARTWORK } from '../../../../graphqls/queries'
 
 const WorkShow = () => {
@@ -25,20 +23,7 @@ const WorkShow = () => {
 
   return (
     <Layout user={user} metaData={metaData(user, work)}>
-      <Section isGray>
-        <Txt tag="h2" size="l" font="sans">
-          {work.title}
-        </Txt>
-        <SubTxt size="s">{work.completedAt || 'Working in progress'}</SubTxt>
-        <div className="mt-8">
-          <ImgWithModal src={work.thumbnailUrl} />
-        </div>
-        <Txt className="mt-8">{work.description}</Txt>
-        <div className="mt-8">
-          <SubTxt size="s">Material: {work.paintingMethod}</SubTxt>
-          <SubTxt size="s">Size: {work.size}</SubTxt>
-        </div>
-      </Section>
+      <WorkSummary work={work} />
       {processes && <ProcessLists processes={processes} />}
     </Layout>
   )

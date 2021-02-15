@@ -6,6 +6,8 @@ interface Props {
   width?: number
   height?: number
   src: string
+  onTop?: () => void
+  onButtom?: () => void
   className?: string
 }
 
@@ -13,6 +15,8 @@ export const ImgWithModal: React.FC<Props> = ({
   width = 800,
   height = 450,
   src,
+  onTop = null,
+  onButtom = null,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,9 +25,9 @@ export const ImgWithModal: React.FC<Props> = ({
   const close = () => setIsOpen(false)
 
   return (
-    <div className={className} onClick={() => open()}>
+    <div className={className} onClick={open}>
       <Image src={src} width={width} height={height} />
-      <Modal open={isOpen} onClose={() => close()}>
+      <Modal open={isOpen} onClose={close} onTop={onTop} onButtom={onButtom}>
         <Image src={src} width={width * 1.5} height={height * 1.5} />
       </Modal>
     </div>

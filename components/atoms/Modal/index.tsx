@@ -5,25 +5,26 @@ interface Props {
   children: React.ReactNode
   open: boolean
   onClose: () => void
+  onTop?: () => void
+  onButtom?: () => void
 }
 
-export const Modal: React.FC<Props> = ({ children, open, onClose }) => {
-  const x = useMotionValue(0)
+export const Modal: React.FC<Props> = ({
+  children,
+  open,
+  onClose,
+  onTop = null,
+  onButtom = null,
+}) => {
   const y = useMotionValue(0)
   const close = (e: any) => {
     onClose()
     e.stopPropagation()
   }
 
-  x.onChange((current) => {
-    if (Math.abs(current) > 100) {
-      onClose()
-    }
-  })
   y.onChange((current) => {
-    if (Math.abs(current) > 100) {
-      onClose()
-    }
+    if (current < -250) onTop ? onTop() : onClose()
+    if (current > 100) onButtom ? onButtom() : onClose()
   })
 
   return (
@@ -39,9 +40,10 @@ export const Modal: React.FC<Props> = ({ children, open, onClose }) => {
             <motion.div
               onClick={stopPropagation}
               className={style.body}
-              drag
-              dragConstraints={{ top: 1, right: 1, bottom: -1, left: -1 }}
-              style={{ x, y }}
+              drag="y"
+              dragConstraints={{ top: 0, bottom: 0 }}
+              dragElastic={0.8}
+              style={{ y }}
             >
               {children}
             </motion.div>

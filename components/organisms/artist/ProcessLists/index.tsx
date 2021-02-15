@@ -1,11 +1,32 @@
-import Image from 'next/image'
+import { useMutation } from '@apollo/client'
 import { Section } from '../../../atoms/Section'
 import { Txt, SubTxt } from '../../../atoms/Txt'
 import { Youtube } from '../../../atoms/Youtube'
+import { ImgWithModal } from '../../../molecules/ImgWithModal'
 import { Process } from '../../../../interfaces'
+import { UPDATE_WALL } from '../../../../graphqls/mutations'
+import { GET_WALL } from '../../../../graphqls/queries'
 
 export interface Props {
   processes: Process[]
+}
+
+const ImageList = ({ imageUrl }) => {
+  const [updateWall] = useMutation(UPDATE_WALL, {
+    update: (cache, { data: { updatedWall } }) => {
+      cache.writeQuery({
+        query: GET_WALL,
+        data: { wall: updatedWall },
+      })
+    },
+    variables: { id: 1, contentUrl: imageUrl }, // FIXME: make id dynamic
+  })
+
+  return (
+    <div className="mt-8">
+      <ImgWithModal src={imageUrl} onTop={updateWall} />
+    </div>
+  )
 }
 
 export const ProcessLists: React.FC<Props> = ({ processes }) => (
@@ -26,9 +47,7 @@ export const ProcessLists: React.FC<Props> = ({ processes }) => (
           ))}
         {pro.imageUrls &&
           pro.imageUrls.map((imageUrl, index) => (
-            <div key={index} className="mt-8">
-              <Image src={imageUrl} width={800} height={500} />
-            </div>
+            <ImageList key={index} imageUrl={imageUrl} />
           ))}
         {pro.videoIds &&
           pro.videoIds.map((videoId, index) => (

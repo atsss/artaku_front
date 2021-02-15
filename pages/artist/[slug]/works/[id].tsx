@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { useQuery } from '@apollo/client'
 import { Loading } from '../../../../components/atoms/Loading'
 import { Section } from '../../../../components/atoms/Section'
 import { Txt, SubTxt } from '../../../../components/atoms/Txt'
 import { Layout } from '../../../../components/organisms/artist/Layout'
+import { ImgWithModal } from '../../../../components/molecules/ImgWithModal'
 import { ProcessLists } from '../../../../components/organisms/artist/ProcessLists'
 import { GET_ARTWORK } from '../../../../graphqls/queries'
 
@@ -31,7 +31,7 @@ const WorkShow = () => {
         </Txt>
         <SubTxt size="s">{work.completedAt || 'Working in progress'}</SubTxt>
         <div className="mt-8">
-          <Image src={work.thumbnailUrl} width={600} height={400} />
+          <ImgWithModal src={work.thumbnailUrl} />
         </div>
         <Txt className="mt-8">{work.description}</Txt>
         <div className="mt-8">

@@ -1,7 +1,7 @@
 import style from './style.module.sass'
 
 interface Props {
-  children: React.ReactNode
+  children?: React.ReactNode
   color?: string
   isGray?: boolean
   image?: string

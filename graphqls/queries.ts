@@ -46,3 +46,12 @@ export const GET_ARTWORK = gql`
     }
   }
 `
+
+export const GET_WALL = gql`
+  query Wall($id: ID!) {
+    wall(id: $id) {
+      id
+      contentUrl
+    }
+  }
+`

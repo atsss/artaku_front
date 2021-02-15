@@ -51,6 +51,7 @@ export const GET_WALL = gql`
   query Wall($id: ID!) {
     wall(id: $id) {
       id
+      comment
       contentUrl
     }
   }

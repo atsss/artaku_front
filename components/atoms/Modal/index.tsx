@@ -23,8 +23,14 @@ export const Modal: React.FC<Props> = ({
   }
 
   y.onChange((current) => {
-    if (current < -250) onTop ? onTop() : onClose()
-    if (current > 100) onButtom ? onButtom() : onClose()
+    if (current < -250) {
+      if (onTop) onTop()
+      onClose()
+    }
+    if (current > 100) {
+      if (onButtom) onButtom()
+      onClose()
+    }
   })
 
   return (

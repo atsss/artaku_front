@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
 import useWebSocket, { ReadyState } from 'react-use-websocket'
 import { Loading } from '../../../components/atoms/Loading'
-import { Section } from '../../../components/atoms/Section'
+import { Drawing } from '../../../components/organisms/viewer/Drawing'
 import { GET_WALL } from '../../../graphqls/queries'
 
 const WallShow = (): JSX.Element => {
@@ -44,11 +44,7 @@ const WallShow = (): JSX.Element => {
 
   const { wall } = data
 
-  return (
-    <div className="h-screen">
-      <Section image={wall.contentUrl} />
-    </div>
-  )
+  return <Drawing imageUrl={wall.contentUrl} />
 }
 
 export default WallShow

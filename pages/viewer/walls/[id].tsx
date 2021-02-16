@@ -17,10 +17,6 @@ const WallShow = (): JSX.Element => {
   }
   const { sendJsonMessage, lastMessage, readyState } = useWebSocket(socketUrl)
 
-  const { loading, error, data, updateQuery } = useQuery(GET_WALL, {
-    variables: { id },
-  })
-
   const connectionStatus = {
     [ReadyState.CONNECTING]: 'Connecting',
     [ReadyState.OPEN]: 'Open',
@@ -28,6 +24,10 @@ const WallShow = (): JSX.Element => {
     [ReadyState.CLOSED]: 'Closed',
     [ReadyState.UNINSTANTIATED]: 'Uninstantiated',
   }[readyState]
+
+  const { loading, error, data, updateQuery } = useQuery(GET_WALL, {
+    variables: { id },
+  })
 
   useEffect(() => id && sendJsonMessage(subscribeParams), [id])
   useEffect(() => {

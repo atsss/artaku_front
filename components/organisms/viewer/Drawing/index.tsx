@@ -1,20 +1,13 @@
 import { useEffect } from 'react'
 
-export interface Props {
-  imageUrl: string
-}
-
-export const Drawing: React.FC<Props> = ({ imageUrl }) => {
+export const Drawing = (): JSX.Element => {
   const Sketch = (p5) => {
     const textColor = 255
     const textSize = 36
-    let bg
-
-    p5.preload = () => (bg = p5.loadImage(imageUrl))
 
     p5.setup = () => {
       p5.createCanvas(p5.windowWidth, p5.windowHeight)
-      p5.background(bg)
+      p5.background(0, 0, 0, 0)
     }
 
     p5.mouseDragged = () => {
@@ -29,7 +22,7 @@ export const Drawing: React.FC<Props> = ({ imageUrl }) => {
     const canvas = new p5(Sketch)
 
     return () => canvas.remove()
-  }, [imageUrl])
+  }, [])
 
   return <div />
 }

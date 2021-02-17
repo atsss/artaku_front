@@ -1,19 +1,83 @@
 import { useEffect } from 'react'
+import { db } from '../../../../lib/firebase'
+
+const saveDrawing = (drawing) => {
+  const date = new Date()
+  const today = date.valueOf().toString()
+  db.collection('drawings').doc(today).set({
+    drawing,
+    date: date.valueOf(),
+  })
+
+  db.collection('drawings').doc(today).delete()
+}
 
 export const Drawing = (): JSX.Element => {
   const Sketch = (p5) => {
-    const textColor = 255
-    const textSize = 36
+    const drawings = []
+    let itr = 0 // noise生成の種
 
-    p5.setup = () => {
+    const update = (drawing) => {
+      drawing.r += 2
+      drawing.a -= 1
+    }
+    const render = (drawing) => {
+      p5.noStroke()
+      p5.drawingContext.shadowOffsetX = 0
+      p5.drawingContext.shadowOffsetY = 0
+      p5.drawingContext.shadowBlur = 1000
+      p5.drawingContext.shadowColor = p5.color(drawing.c, 255, 255)
+      p5.fill(drawing.c, 255, 255, drawing.a)
+      p5.ellipse(drawing.x, drawing.y, drawing.r)
+    }
+
+    const initSetup = () => {
       p5.createCanvas(p5.windowWidth, p5.windowHeight)
       p5.background(0, 0, 0, 0)
     }
 
-    p5.mouseDragged = () => {
-      p5.noStroke()
-      p5.fill(textColor)
-      p5.ellipse(p5.mouseX, p5.mouseY, textSize, textSize)
+    db.collection('drawings').onSnapshot((snapshots) => {
+      snapshots.forEach((snapshot) => {
+        const drawingHistory = {
+          x: snapshot.data().drawing.x * p5.windowWidth,
+          y: snapshot.data().drawing.y * p5.windowHeight,
+          c: snapshot.data().drawing.c,
+          r: 0,
+          a: 100,
+        }
+        drawings.push(drawingHistory)
+      })
+    })
+
+    p5.setup = () => {
+      initSetup()
+      window.onresize = () => {
+        initSetup()
+      }
+    }
+
+    p5.draw = () => {
+      for (let i = 0; i < drawings.length; i++) {
+        update(drawings[i])
+        render(drawings[i])
+        if (drawings[i].a < 0) {
+          drawings.splice(i, 1)
+        }
+      }
+
+      if (p5.mouseIsPressed) {
+        const posX = p5.mouseX / p5.windowWidth
+        const posY = p5.mouseY / p5.windowHeight
+        const color = p5.floor(p5.noise(itr / 50) * 300)
+        const dbDrawing = {
+          x: posX,
+          y: posY,
+          c: color,
+        }
+        saveDrawing(dbDrawing)
+      }
+
+      itr++
     }
   }
 

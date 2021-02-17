@@ -15,20 +15,18 @@ const saveDrawing = (drawing) => {
 export const Drawing = (): JSX.Element => {
   const Sketch = (p5) => {
     const drawings = []
+    const drawSize = 40
     let itr = 0 // noise生成の種
 
-    const update = (drawing) => {
-      drawing.r += 2
-      drawing.a -= 1
-    }
+    const update = (drawing) => (drawing.a -= 1)
     const render = (drawing) => {
       p5.noStroke()
       p5.drawingContext.shadowOffsetX = 0
       p5.drawingContext.shadowOffsetY = 0
-      p5.drawingContext.shadowBlur = 1000
+      p5.drawingContext.shadowBlur = 10
       p5.drawingContext.shadowColor = p5.color(drawing.c, 255, 255)
       p5.fill(drawing.c, 255, 255, drawing.a)
-      p5.ellipse(drawing.x, drawing.y, drawing.r)
+      p5.ellipse(drawing.x, drawing.y, drawSize)
     }
 
     const initSetup = () => {
@@ -42,7 +40,6 @@ export const Drawing = (): JSX.Element => {
           x: snapshot.data().drawing.x * p5.windowWidth,
           y: snapshot.data().drawing.y * p5.windowHeight,
           c: snapshot.data().drawing.c,
-          r: 0,
           a: 100,
         }
         drawings.push(drawingHistory)

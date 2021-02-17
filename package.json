@@ -28,6 +28,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "autoprefixer": "^10.1.0",
+    "firebase": "^8.2.7",
     "framer-motion": "^3.3.0",
     "graphql": "^15.5.0",
     "next": "latest",

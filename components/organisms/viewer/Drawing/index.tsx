@@ -15,7 +15,7 @@ const saveDrawing = (drawing) => {
 export const Drawing = (): JSX.Element => {
   const Sketch = (p5) => {
     const drawings = []
-    const drawSize = 40
+    const drawSize = 30
     let itr = 0 // noise生成の種
 
     const update = (drawing) => (drawing.a -= 1)
@@ -40,7 +40,7 @@ export const Drawing = (): JSX.Element => {
           x: snapshot.data().drawing.x * p5.windowWidth,
           y: snapshot.data().drawing.y * p5.windowHeight,
           c: snapshot.data().drawing.c,
-          a: 100,
+          a: 50,
         }
         drawings.push(drawingHistory)
       })

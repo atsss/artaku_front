@@ -12,6 +12,22 @@ const saveDrawing = (drawing) => {
   db.collection('drawings').doc(today).delete()
 }
 
+const deleteAll = () => {
+  db.collection('drawings')
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => doc.ref.delete())
+    })
+}
+
+const sendClear = () => {
+  const date = new Date()
+  const today = date.valueOf().toString()
+  db.collection('clear').doc(today).set({ date: date.valueOf() })
+
+  db.collection('clear').doc(today).delete()
+}
+
 export const Drawing = (): JSX.Element => {
   const Sketch = (p5) => {
     const drawings = []
@@ -44,6 +60,10 @@ export const Drawing = (): JSX.Element => {
         }
         drawings.push(drawingHistory)
       })
+    })
+
+    db.collection('clear').onSnapshot((snapshots) => {
+      snapshots.forEach(() => p5.clear())
     })
 
     p5.setup = () => {
@@ -79,6 +99,8 @@ export const Drawing = (): JSX.Element => {
 
     p5.doubleClicked = () => {
       p5.clear()
+      deleteAll()
+      sendClear()
     }
   }
 

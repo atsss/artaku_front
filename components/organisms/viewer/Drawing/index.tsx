@@ -62,19 +62,23 @@ export const Drawing = (): JSX.Element => {
         }
       }
 
-      if (p5.mouseIsPressed) {
-        const posX = p5.mouseX / p5.windowWidth
-        const posY = p5.mouseY / p5.windowHeight
-        const color = p5.floor(p5.noise(itr / 50) * 300)
-        const dbDrawing = {
-          x: posX,
-          y: posY,
-          c: color,
-        }
-        saveDrawing(dbDrawing)
-      }
-
       itr++
+    }
+
+    p5.touchMoved = () => {
+      const posX = p5.mouseX / p5.windowWidth
+      const posY = p5.mouseY / p5.windowHeight
+      const color = p5.floor(p5.noise(itr / 50) * 300)
+      const dbDrawing = {
+        x: posX,
+        y: posY,
+        c: color,
+      }
+      saveDrawing(dbDrawing)
+    }
+
+    p5.doubleClicked = () => {
+      p5.clear()
     }
   }
 

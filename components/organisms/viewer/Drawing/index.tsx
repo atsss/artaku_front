@@ -23,7 +23,7 @@ export const Drawing = (): JSX.Element => {
       p5.noStroke()
       p5.drawingContext.shadowOffsetX = 0
       p5.drawingContext.shadowOffsetY = 0
-      p5.drawingContext.shadowBlur = 10
+      p5.drawingContext.shadowBlur = 8
       p5.drawingContext.shadowColor = p5.color(drawing.c, 255, 255)
       p5.fill(drawing.c, 255, 255, drawing.a)
       p5.ellipse(drawing.x, drawing.y, drawSize)

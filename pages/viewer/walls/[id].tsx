@@ -30,6 +30,10 @@ const WallShow = (): JSX.Element => {
     variables: { id },
   })
 
+  useEffect(() => {
+    document.body.className = 'overscroll-y-none'
+    return () => (document.body.className = '')
+  })
   useEffect(() => id && sendJsonMessage(subscribeParams), [id])
   useEffect(() => {
     const json = lastMessage ? JSON.parse(lastMessage.data) : null
@@ -46,12 +50,12 @@ const WallShow = (): JSX.Element => {
   const { wall } = data
 
   return (
-    <div className="overscroll-y-none">
+    <>
       <div className="h-screen w-full fixed -z-10">
         <Section image={wall.contentUrl} />
       </div>
       <Drawing />
-    </div>
+    </>
   )
 }
 

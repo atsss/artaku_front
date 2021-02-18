@@ -46,12 +46,12 @@ const WallShow = (): JSX.Element => {
   const { wall } = data
 
   return (
-    <>
+    <div className="overscroll-y-none">
       <div className="h-screen w-full fixed -z-10">
         <Section image={wall.contentUrl} />
       </div>
       <Drawing />
-    </>
+    </div>
   )
 }
 

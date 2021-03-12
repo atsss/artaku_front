@@ -4,58 +4,79 @@ export const i18n = {
       'Artaku is art online platform, which is your unlimited artworks storage in New York. Artaku alse provides you with oppotunities to sell your artworks.',
     artist: {
       keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpiece'],
-      hero: ['Your', 'Unlimited', 'Artworks', 'Storage', 'In New York'],
+      hero: ['Expose', 'Your artworks', 'In home gallery'],
       sections: [
         {
-          title: 'We will keep your countless artworks instead of you',
+          title: 'Unlimited storage',
           description:
             'All you have to do is call us! Then we’ll take your artworks and keep them instead of you. The number of artworks is unlimited. Whenever you want to store your artworks, you can call. That’s it! You don’t have to be worried about where to store them.',
+          values: ['One call', 'Door to door pickup', 'Status check'],
         },
         {
-          title:
-            'We will make your portfolio with professional photos of your artworks',
+          title: 'Digital archive',
           description:
             'After we take your artworks, we will take professional photos of them. Then we will make your personal page on Artaku and upload them on it. You can use the personal page as your portfolio as well. You don’t have to spend time on making and updating your portfolio anymore!',
+          values: [
+            'Photo will be stored even after your artworks are sold',
+            'Page will work as your portfolio',
+            'No need of updating',
+          ],
         },
         {
-          title: 'You can sell your artworks through Artaku',
+          title: 'Sell your artworks',
           description:
             'We can match your artworks and art lovers in New York better with machine learning. Firstly we will rent your artworks to the art lovers. Then if they like your artworks, they buy them and we pay you for the artworks. You don’t need galleries because you can sell your artworks here!',
+          values: [
+            'Reach new audience',
+            'Machine learning for best match',
+            'Only 20% commission when your artwork is sold',
+          ],
         },
       ],
-      footer: '$200 per month',
+      footer: 'For free',
       form: 'https://forms.gle/R2ZsZ3M6o4xyb17N6',
       embeddedForm: {
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
+        src:
+          'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
         height: '1654',
       },
     },
     user: {
       keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
-      hero: ['Create Your', 'Home Gallery', 'In New York'],
+      hero: ['Create Your', 'Home Gallery', 'In NYC'],
       sections: [
         {
-          title:
-            'You will enjoy experience of online & offline art without any hassle',
+          title: 'You can create your unique room',
           description:
             "We use machine learning to bring you the best artworks online for you. If you find a painting that interests you, you can rent it as a trial. If you like it even more, you can buy the artworks. You don't have to worry about shipping the artworks. We will deliver the artworks to your home. Moreover, we will take it from your home when you return it. Artaku seamlessly connects your online and offline art appreciating experience.",
+          values: ['Upcoming artists', 'Original artworks', 'Affordable price'],
         },
         {
-          title:
-            'You will find upcoming talent instead of going to museums and galleries',
+          title: 'You can change artworks anytime',
           description:
             "We focus on unknown and young artists. We bring you new expressions from promising artists that you can't find anywhere else yet. You don't have to go to museums and galleries to find new talent anymore. Artaku brings new art to your everyday life!",
+          values: [
+            'Artworks are delivered according to your taste and mood',
+            'Flexible delivery dates',
+            'Free shipping',
+          ],
         },
         {
-          title: 'You will create connection among art lovers ',
+          title: 'Artaku community',
           description:
             'We provide you with a place to appreciate art with other users who like the same artworks so that you can enjoy them more. There is a group board to share your thoughts and a place for real-time voice conversations. With Artaku, you can have a longer and deeper appreciation of art with other users. We propose a new way to enjoy art in your home.',
+          values: [
+            'Access to other home galleries',
+            'Inspire each other through conversation',
+            'No any judgement at home',
+          ],
         },
       ],
-      footer: '$5 per week',
+      footer: '$20 per month',
       form: 'https://forms.gle/CmPzwCnsw4Xdk2M99',
       embeddedForm: {
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
+        src:
+          'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
         height: '2209',
       },
     },
@@ -86,7 +107,8 @@ export const i18n = {
       footer: '月額 20,000 円',
       form: 'https://forms.gle/eTXw68ZQXW1moiNr9',
       embeddedForm: {
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
+        src:
+          'https://docs.google.com/forms/d/e/1FAIpQLSf5M4li7efK_S24IFFkNWcm7bf_nbUJ1s3CUtmamHrcD7vAVQ/viewform?embedded=true',
         height: '1654',
       },
     },
@@ -115,7 +137,8 @@ export const i18n = {
       footer: '500 円/週',
       form: 'https://forms.gle/CmPzwCnsw4Xdk2M99',
       embeddedForm: {
-        src: 'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
+        src:
+          'https://docs.google.com/forms/d/e/1FAIpQLSd0QPz2-qy2vCPOLEu5jQNpwh9oJT4Sm5LCcF2-EedYjGo6ew/viewform?embedded=true',
         height: '2209',
       },
     },

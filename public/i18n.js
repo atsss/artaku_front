@@ -1,9 +1,19 @@
 export const i18n = {
   'en-US': {
     description:
-      'Artaku is art online platform, which is your unlimited artworks storage in New York. Artaku alse provides you with oppotunities to sell your artworks.',
+      'Artaku is a service platform that connects art lovers and artists by providing artworks on rental and creating a home gallery experience.',
     artist: {
-      keywords: ['Artwork', 'Storage', 'Warehouse', 'Portfolio', 'Artpiece'],
+      keywords: [
+        'Artaku',
+        'Art',
+        'Artwork',
+        'Artpiece',
+        'Storage',
+        'Warehouse',
+        'Degital archive',
+        'Rental',
+        'Art community',
+      ],
       hero: ['Expose', 'Your artworks', 'In home gallery'],
       sections: [
         {

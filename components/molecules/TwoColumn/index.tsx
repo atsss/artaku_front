@@ -6,7 +6,7 @@ import { Txt, SubTxt } from '../../atoms/Txt'
 export interface Props {
   src: string
   title: string
-  description: string
+  values: [string]
   isReversed?: boolean
   className?: string
 }
@@ -14,21 +14,30 @@ export interface Props {
 export const TwoColumn: React.FC<Props> = ({
   src,
   title,
-  description,
+  values,
   isReversed,
   className,
 }) => (
   <Section className={className}>
     <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 grid-flow-row-dense">
       <div className={isReversed ? style.reversed : ''}>
-        <Image src={src} width={800} height={500} />
+        <Image src={src} width={1600} height={900} />
       </div>
       <div>
         <Txt tag="h2" size="l" weight="bold" font="sans">
           {title}
         </Txt>
-        <SubTxt className="mt-4">{description}</SubTxt>
+        {values.map((value, index) => (
+          <List key={index}>{value}</List>
+        ))}
       </div>
     </div>
   </Section>
+)
+
+const List = ({ children }) => (
+  <div className="md:mt-4 mt-1">
+    <span className="mr-2 text-gray-400 font-bold">･</span>
+    <SubTxt tag="span">{children}</SubTxt>
+  </div>
 )

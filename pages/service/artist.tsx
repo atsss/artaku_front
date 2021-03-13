@@ -27,20 +27,20 @@ export const Artist = (): JSX.Element => {
       <TwoColumn
         src="/img/block01.jpg"
         title={i18n[locale].artist.sections[0].title}
-        description={i18n[locale].artist.sections[0].description}
+        values={i18n[locale].artist.sections[0].values}
         isReversed
         className="mt-16"
       />
       <TwoColumn
         src="/img/block02.jpg"
         title={i18n[locale].artist.sections[1].title}
-        description={i18n[locale].artist.sections[1].description}
+        values={i18n[locale].artist.sections[1].values}
         className="mt-16"
       />
       <TwoColumn
         src="/img/block03.jpg"
         title={i18n[locale].artist.sections[2].title}
-        description={i18n[locale].artist.sections[2].description}
+        values={i18n[locale].artist.sections[2].values}
         isReversed
         className="mt-16 mb-16"
       />

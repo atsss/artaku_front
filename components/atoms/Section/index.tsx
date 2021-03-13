@@ -12,14 +12,17 @@ export const Section: React.FC<Props> = ({
   children,
   color = null,
   isGray = false,
-  image,
+  image = null,
   className,
 }) => {
   if (isGray && !color) color = '#FAFAFA'
+  const backgroundImage = image
+    ? { backgroundImage: `url(${image})`, backgroundPosition: 'top' }
+    : {}
 
   const backgroundStyle = {
     backgroundColor: color,
-    backgroundImage: `url(${image})`,
+    ...backgroundImage,
   }
 
   return (

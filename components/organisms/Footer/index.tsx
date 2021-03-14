@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer>
-      <Section isGray>
+      <Section>
         <div className={style.block}>
           <p className={style.text}>
             {isArtist ? i18n[locale].artist.footer : i18n[locale].user.footer}

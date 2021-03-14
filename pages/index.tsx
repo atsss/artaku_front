@@ -5,6 +5,7 @@ import { FadeInOut } from '../components/atoms/FadeInOut'
 import { Footer } from '../components/organisms/Footer'
 import { Header } from '../components/organisms/Header'
 import { Hero } from '../components/organisms/Hero'
+import { Artworks } from '../components/organisms/lp/Artworks'
 import { TwoColumn } from '../components/molecules/TwoColumn'
 
 export const Home = (): JSX.Element => {
@@ -45,6 +46,7 @@ export const Home = (): JSX.Element => {
         isReversed
         className="mt-16 mb-16"
       />
+      <Artworks />
       <Footer />
     </FadeInOut>
   )

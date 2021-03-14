@@ -5,6 +5,7 @@ export const i18n = {
     artist: {
       keywords: [
         'Artaku',
+        'Original',
         'Art',
         'Artwork',
         'Artpiece',
@@ -13,6 +14,8 @@ export const i18n = {
         'Degital archive',
         'Rental',
         'Art community',
+        'New York',
+        'NYC',
       ],
       hero: ['Expose', 'Your artworks', 'In home gallery'],
       sections: [
@@ -46,19 +49,38 @@ export const i18n = {
       },
     },
     user: {
-      keywords: ['Artwork', 'Rental', 'Original', 'New York', 'Community'],
+      keywords: [
+        'Artaku',
+        'Original',
+        'Art',
+        'Artwork',
+        'Artpiece',
+        'Storage',
+        'Warehouse',
+        'Degital archive',
+        'Rental',
+        'Art community',
+        'New York',
+        'NYC',
+      ],
       hero: ['Create Your', 'Home Gallery', 'In NYC'],
       sections: [
         {
           title: 'Create your unique room',
-          values: ['Upcoming artists', 'Original artworks', 'Affordable price'],
+          values: [
+            'Upcoming artists',
+            'Original artworks',
+            'Affordable price',
+            'Decide the number of artworks',
+          ],
         },
         {
-          title: 'Wait for artworks every week',
+          title: 'Change artworks every week',
           values: [
             'Delivered based on your taste and mood',
             'Flexible delivery dates',
             'Free shipping',
+            'Purchase if you like artworks',
           ],
         },
         {
@@ -66,7 +88,7 @@ export const i18n = {
           values: [
             'Access to other home galleries',
             'Inspire each other through conversation',
-            'No any judgement at home',
+            'Casual talk with new friends',
           ],
         },
       ],

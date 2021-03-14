@@ -8,23 +8,20 @@ export interface Props {
   className?: string
 }
 
-export const Button: React.FC<Props> = ({
+const buttonFactory = (role: string) => ({
   href,
   size = 'm',
   children,
   className,
-}) => (
+}: Props) => (
   <a className={style.link} href={href}>
     <div
-      className={[
-        style.body,
-        style[size],
-        'bg-yellow-300',
-        'hover:bg-yellow-200',
-        className,
-      ].join(' ')}
+      className={[style.body, style[role], style[size], className].join(' ')}
     >
       {children}
     </div>
   </a>
 )
+
+export const Button = buttonFactory('default')
+export const SubButton = buttonFactory('sub')

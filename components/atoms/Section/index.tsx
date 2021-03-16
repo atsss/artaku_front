@@ -17,7 +17,12 @@ export const Section: React.FC<Props> = ({
 }) => {
   if (isGray && !color) color = '#FAFAFA'
   const backgroundImage = image
-    ? { backgroundImage: `url(${image})`, backgroundPosition: 'top' }
+    ? {
+        backgroundImage: `url(${image})`,
+        backgroundColor: 'rgba(255,255,255,0.4)',
+        backgroundBlendMode: 'overlay',
+        backgroundPosition: 'top',
+      }
     : {}
 
   const backgroundStyle = {

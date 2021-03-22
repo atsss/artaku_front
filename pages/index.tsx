@@ -6,6 +6,7 @@ import { Footer } from '../components/organisms/Footer'
 import { Header } from '../components/organisms/Header'
 import { Hero } from '../components/organisms/Hero'
 import { Artworks } from '../components/organisms/lp/Artworks'
+import { Concept } from '../components/organisms/lp/Concept'
 import { TwoColumn } from '../components/molecules/TwoColumn'
 
 export const Home = (): JSX.Element => {
@@ -26,6 +27,7 @@ export const Home = (): JSX.Element => {
       </Head>
       <Header />
       <Hero />
+      <Concept />
       <TwoColumn
         src="/img/block04.jpg"
         title={i18n[locale].user.sections[0].title}

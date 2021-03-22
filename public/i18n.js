@@ -32,9 +32,9 @@ export const i18n = {
           ],
         },
         {
-          title: 'Sell your artworks',
+          title: 'Get more expousre',
           values: [
-            'Reach new audience',
+            'Reach new audience everyweek',
             'Machine learning for best match',
             'Only 20% commission when your artwork is sold',
           ],

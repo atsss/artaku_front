@@ -5,6 +5,7 @@ export interface Props {
   size?: string
   weight?: string
   font?: 'serif' | 'sans'
+  position?: string
   children: React.ReactNode
   className?: string
 }
@@ -14,6 +15,7 @@ const txtFactory = (role: string) => ({
   size = 'm',
   weight = 'normal',
   font = 'serif',
+  position = 'left',
   className,
   children,
 }: Props) => (
@@ -22,6 +24,7 @@ const txtFactory = (role: string) => ({
       style[role],
       style[size],
       style[weight],
+      style[position],
       style[font],
       className,
     ].join(' ')}

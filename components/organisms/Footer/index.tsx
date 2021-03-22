@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { i18n } from '../../../public/i18n'
 import style from './style.module.sass'
+import { Txt } from '../../atoms/Txt'
 import { Section } from '../../atoms/Section'
 
 export const Footer = (): JSX.Element => {
@@ -12,9 +13,9 @@ export const Footer = (): JSX.Element => {
     <footer>
       <Section>
         <div className={style.block}>
-          <p className={style.text}>
+          <Txt tag="h2" size="xl" weight="bold" font="sans" position="center">
             {isArtist ? i18n[locale].artist.footer : i18n[locale].user.footer}
-          </p>
+          </Txt>
           <div className="flex justify-center">
             <iframe
               src={

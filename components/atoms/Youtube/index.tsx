@@ -1,3 +1,5 @@
+import style from './style.module.sass'
+
 interface Props {
   id: string
   className?: string
@@ -6,7 +8,7 @@ interface Props {
 export const Youtube: React.FC<Props> = ({ id, className }) => (
   <div className={className}>
     <iframe
-      className="w-full md:w-6/12 h-40 md:h-96"
+      className={style.iframe}
       src={`https://www.youtube.com/embed/${id}?rel=0`}
       frameBorder="0"
       allow="autoplay;

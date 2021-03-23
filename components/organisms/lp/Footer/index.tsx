@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
-import { i18n } from '../../../public/i18n'
+import { i18n } from '../../../../public/i18n'
 import style from './style.module.sass'
-import { Txt } from '../../atoms/Txt'
-import { Section } from '../../atoms/Section'
+import { Txt } from '../../../atoms/Txt'
+import { Section } from '../../../atoms/Section'
 
 export const Footer = (): JSX.Element => {
   const router = useRouter()

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import { i18n } from '../../../public/i18n'
+import { i18n } from '../../../../public/i18n'
 import style from './style.module.sass'
-import { Section } from '../../atoms/Section'
+import { Section } from '../../../atoms/Section'
 
 export const Hero = (): JSX.Element => {
   const router = useRouter()

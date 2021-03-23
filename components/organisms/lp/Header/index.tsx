@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
-import { i18n } from '../../../public/i18n'
+import { i18n } from '../../../../public/i18n'
 import style from './style.module.sass'
-import { Section } from '../../atoms/Section'
-import { Button } from '../../atoms/Button'
+import { Section } from '../../../atoms/Section'
+import { Button } from '../../../atoms/Button'
 
 export const Header = (): JSX.Element => {
   const router = useRouter()

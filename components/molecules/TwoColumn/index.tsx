@@ -24,7 +24,7 @@ export const TwoColumn: React.FC<Props> = ({
         <Image src={src} width={1600} height={900} />
       </div>
       <div>
-        <Txt tag="h2" size="l" weight="bold" font="sans">
+        <Txt tag="h3" size="l" weight="bold" font="sans">
           {title}
         </Txt>
         {values.map((value, index) => (

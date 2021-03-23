@@ -4,6 +4,7 @@ interface Props {
   children?: React.ReactNode
   color?: string
   isGray?: boolean
+  isPadding?: boolean
   image?: string
   className?: string
 }
@@ -12,6 +13,7 @@ export const Section: React.FC<Props> = ({
   children,
   color = null,
   isGray = false,
+  isPadding = false,
   image = null,
   className,
 }) => {
@@ -30,11 +32,11 @@ export const Section: React.FC<Props> = ({
     ...backgroundImage,
   }
 
+  const sectionClassNames = [style.container, className]
+  if (isPadding) sectionClassNames.push(style.padding)
+
   return (
-    <section
-      className={[style.container, className].join(' ')}
-      style={backgroundStyle}
-    >
+    <section className={sectionClassNames.join(' ')} style={backgroundStyle}>
       <div className={style.content}>{children}</div>
     </section>
   )

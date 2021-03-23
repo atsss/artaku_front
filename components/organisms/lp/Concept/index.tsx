@@ -3,7 +3,7 @@ import { Section } from '../../../atoms/Section'
 import { Youtube } from '../../../atoms/Youtube'
 
 export const Concept = (): JSX.Element => (
-  <Section className="mt-16">
+  <Section isGray isPadding>
     <Txt tag="h2" size="xl" weight="bold" font="sans" position="center">
       Concept vido
     </Txt>

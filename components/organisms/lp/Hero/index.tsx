@@ -9,9 +9,11 @@ export const Hero = (): JSX.Element => {
   const isArtist = pathname.includes('artist')
   const texts = isArtist ? i18n[locale].artist.hero : i18n[locale].user.hero
 
+  const src = isArtist ? '/img/hero01.jpg' : '/img/hero02.jpg'
+
   return (
     <main className={style.body}>
-      <Section image="/img/hero02.jpg">
+      <Section image={src}>
         <div className={style.block}>
           <h1 className="text-right">
             {texts.map((text: string, index: number) => (

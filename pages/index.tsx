@@ -7,7 +7,7 @@ import { Header } from '../components/organisms/Header'
 import { Hero } from '../components/organisms/Hero'
 import { Artworks } from '../components/organisms/lp/Artworks'
 import { Concept } from '../components/organisms/lp/Concept'
-import { TwoColumn } from '../components/molecules/TwoColumn'
+import { Features } from '../components/organisms/lp/Features'
 
 export const Home = (): JSX.Element => {
   const router = useRouter()
@@ -28,26 +28,7 @@ export const Home = (): JSX.Element => {
       <Header />
       <Hero />
       <Concept />
-      <TwoColumn
-        src="/img/block04.jpg"
-        title={i18n[locale].user.sections[0].title}
-        values={i18n[locale].user.sections[0].values}
-        isReversed
-        className="mt-16"
-      />
-      <TwoColumn
-        src="/img/block05.jpg"
-        title={i18n[locale].user.sections[1].title}
-        values={i18n[locale].user.sections[1].values}
-        className="mt-16"
-      />
-      <TwoColumn
-        src="/img/block06.jpg"
-        title={i18n[locale].user.sections[2].title}
-        values={i18n[locale].user.sections[2].values}
-        isReversed
-        className="mt-16 mb-16"
-      />
+      <Features />
       <Artworks />
       <Footer />
     </FadeInOut>

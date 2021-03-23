@@ -1,14 +1,13 @@
 import style from './style.module.sass'
 
 export interface Props {
-  // onPress: () => void
   href: string
   size?: string
   children: React.ReactNode
   className?: string
 }
 
-const buttonFactory = (role: string) => ({
+const linkFactory = (role: string) => ({
   href,
   size = 'm',
   children,
@@ -23,5 +22,5 @@ const buttonFactory = (role: string) => ({
   </a>
 )
 
-export const Button = buttonFactory('default')
-export const SubButton = buttonFactory('sub')
+export const Link = linkFactory('default')
+export const SubLink = linkFactory('sub')

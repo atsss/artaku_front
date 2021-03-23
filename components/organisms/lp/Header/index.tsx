@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { i18n } from '../../../../public/i18n'
 import style from './style.module.sass'
 import { Section } from '../../../atoms/Section'
-import { Link as CustomLink } from '../../../atoms/Link'
+import { ExternalLink } from '../../../atoms/Link'
 
 export const Header = (): JSX.Element => {
   const router = useRouter()
@@ -17,11 +17,11 @@ export const Header = (): JSX.Element => {
           <Link href="/">
             <a className={style.title}>Artaku</a>
           </Link>
-          <CustomLink
+          <ExternalLink
             href={isArtist ? i18n[locale].artist.form : i18n[locale].user.form}
           >
             Apply now
-          </CustomLink>
+          </ExternalLink>
         </div>
       </Section>
     </header>

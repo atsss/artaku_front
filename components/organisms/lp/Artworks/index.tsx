@@ -1,6 +1,6 @@
 import style from './style.module.sass'
 import Image from 'next/image'
-import { SubLink } from '../../../atoms/Link'
+import { ExternalSubLink } from '../../../atoms/Link'
 import { Txt } from '../../../atoms/Txt'
 import { Section } from '../../../atoms/Section'
 
@@ -20,12 +20,12 @@ export const Artworks = (): JSX.Element => (
         <Image src="/img/artwork03.jpg" width={500} height={500} />
       </li>
     </ul>
-    <SubLink
+    <ExternalSubLink
       href="https://www.instagram.com/artaku.art/"
       size="l"
       className="m-auto mt-10"
     >
       See all
-    </SubLink>
+    </ExternalSubLink>
   </Section>
 )

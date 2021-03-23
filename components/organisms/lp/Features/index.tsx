@@ -32,7 +32,7 @@ export const Features = (): JSX.Element => {
         className="mt-16"
       />
       <TwoColumn
-        src={srcs[1]}
+        src={srcs[2]}
         title={i18n[locale][category].sections[2].title}
         values={i18n[locale][category].sections[2].values}
         isReversed

@@ -25,3 +25,21 @@ export const Hero = (): JSX.Element => {
     </main>
   )
 }
+
+export const RootHero = (): JSX.Element => {
+  const texts = ['Make art', 'accessible', 'everywhere', 'for everyone']
+
+  return (
+    <main className={style.body}>
+      <Section image="/img/hero03.jpg">
+        <div className={style.block}>
+          <h1 className="text-right">
+            {texts.map((text: string, index: number) => (
+              <p key={index}>{text}</p>
+            ))}
+          </h1>
+        </div>
+      </Section>
+    </main>
+  )
+}

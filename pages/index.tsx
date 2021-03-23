@@ -7,7 +7,7 @@ import { Concept } from '../components/organisms/lp/Concept'
 import { Features } from '../components/organisms/lp/Features'
 import { Footer } from '../components/organisms/lp/Footer'
 import { Header } from '../components/organisms/lp/Header'
-import { Hero } from '../components/organisms/lp/Hero'
+import { RootHero } from '../components/organisms/lp/Hero'
 
 export const Home = (): JSX.Element => {
   const router = useRouter()
@@ -26,7 +26,7 @@ export const Home = (): JSX.Element => {
         />
       </Head>
       <Header />
-      <Hero />
+      <RootHero />
       <Concept />
       <Features />
       <Artworks />

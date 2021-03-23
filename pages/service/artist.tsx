@@ -6,7 +6,8 @@ import { Footer } from '../../components/organisms/Footer'
 import { Header } from '../../components/organisms/Header'
 import { Hero } from '../../components/organisms/Hero'
 import { Artworks } from '../../components/organisms/lp/Artworks'
-import { TwoColumn } from '../../components/molecules/TwoColumn'
+import { Concept } from '../../components/organisms/lp/Concept'
+import { Features } from '../../components/organisms/lp/Features'
 
 export const Artist = (): JSX.Element => {
   const router = useRouter()
@@ -25,26 +26,8 @@ export const Artist = (): JSX.Element => {
       </Head>
       <Header />
       <Hero />
-      <TwoColumn
-        src="/img/block01.jpg"
-        title={i18n[locale].artist.sections[0].title}
-        values={i18n[locale].artist.sections[0].values}
-        isReversed
-        className="mt-16"
-      />
-      <TwoColumn
-        src="/img/block02.jpg"
-        title={i18n[locale].artist.sections[1].title}
-        values={i18n[locale].artist.sections[1].values}
-        className="mt-16"
-      />
-      <TwoColumn
-        src="/img/block03.jpg"
-        title={i18n[locale].artist.sections[2].title}
-        values={i18n[locale].artist.sections[2].values}
-        isReversed
-        className="mt-16 mb-16"
-      />
+      <Concept />
+      <Features />
       <Artworks />
       <Footer />
     </FadeInOut>

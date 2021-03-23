@@ -20,10 +20,12 @@ export const i18n = {
       hero: ['Expose', 'Your artworks', 'In home gallery'],
       sections: [
         {
+          src: '/img/block01.jpg',
           title: 'Unlimited storage',
           values: ['One call', 'Door to door pickup', 'Status check'],
         },
         {
+          src: '/img/block02.jpg',
           title: 'Digital archive',
           values: [
             'Photo will be stored even after your artworks are sold',
@@ -32,6 +34,7 @@ export const i18n = {
           ],
         },
         {
+          src: '/img/block03.jpg',
           title: 'Get more expousre',
           values: [
             'Reach new audience everyweek',
@@ -66,6 +69,7 @@ export const i18n = {
       hero: ['Create Your', 'Home Gallery', 'In NYC'],
       sections: [
         {
+          src: '/img/block04.jpg',
           title: 'Create your unique room',
           values: [
             'Upcoming artists',
@@ -75,6 +79,7 @@ export const i18n = {
           ],
         },
         {
+          src: '/img/block05.jpg',
           title: 'Change artworks every week',
           values: [
             'Delivered based on your taste and mood',
@@ -84,6 +89,7 @@ export const i18n = {
           ],
         },
         {
+          src: '/img/block06.jpg',
           title: 'Artaku community',
           values: [
             'Access to other home galleries',
@@ -109,14 +115,17 @@ export const i18n = {
       hero: ['Your', 'Unlimited', 'Artworks', 'Storage', 'In Tokyo'],
       sections: [
         {
+          src: '/img/block01.jpg',
           title: 'あなたの代わりに無制限に作品を保管します',
           values: [],
         },
         {
+          src: '/img/block02.jpg',
           title: 'プロの写真であなたの作品をデータ化し、ポートフォリオにします',
           values: [],
         },
         {
+          src: '/img/block03.jpg',
           title: 'サービスを通して作品を売ることができます',
           values: [],
         },
@@ -134,16 +143,19 @@ export const i18n = {
       hero: ['Create Your', 'Home Gallery', 'In New York'],
       sections: [
         {
+          src: '/img/block04.jpg',
           title:
             'You will enjoy experience of online & offline art without any hassle',
           values: [],
         },
         {
+          src: '/img/block05.jpg',
           title:
             'You will find upcoming talent instead of going to museums and galleries',
           values: [],
         },
         {
+          src: '/img/block06.jpg',
           title: 'You will create connection among art lovers ',
           values: [],
         },

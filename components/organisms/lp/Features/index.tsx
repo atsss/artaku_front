@@ -6,7 +6,12 @@ import { TwoColumn } from '../../..//molecules/TwoColumn'
 
 export const Features = (): JSX.Element => {
   const router = useRouter()
-  const { locale } = router
+  const { locale, pathname } = router
+  const isArtist = pathname.includes('artist')
+
+  const baseNum = isArtist ? 1 : 4
+  const category = isArtist ? 'artist' : 'user'
+  const srcs = [0, 1, 2].map((element) => `/img/block0${baseNum + element}.jpg`)
 
   return (
     <Section isPadding>
@@ -14,22 +19,22 @@ export const Features = (): JSX.Element => {
         Why join Artaku
       </Txt>
       <TwoColumn
-        src="/img/block04.jpg"
-        title={i18n[locale].user.sections[0].title}
-        values={i18n[locale].user.sections[0].values}
+        src={srcs[0]}
+        title={i18n[locale][category].sections[0].title}
+        values={i18n[locale][category].sections[0].values}
         isReversed
         className="mt-10"
       />
       <TwoColumn
-        src="/img/block05.jpg"
-        title={i18n[locale].user.sections[1].title}
-        values={i18n[locale].user.sections[1].values}
+        src={srcs[1]}
+        title={i18n[locale][category].sections[1].title}
+        values={i18n[locale][category].sections[1].values}
         className="mt-16"
       />
       <TwoColumn
-        src="/img/block06.jpg"
-        title={i18n[locale].user.sections[2].title}
-        values={i18n[locale].user.sections[2].values}
+        src={srcs[1]}
+        title={i18n[locale][category].sections[2].title}
+        values={i18n[locale][category].sections[2].values}
         isReversed
         className="mt-16 mb-16"
       />

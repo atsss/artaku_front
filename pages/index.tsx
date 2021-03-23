@@ -4,10 +4,9 @@ import { i18n } from '../public/i18n'
 import { FadeInOut } from '../components/atoms/FadeInOut'
 import { Artworks } from '../components/organisms/lp/Artworks'
 import { Concept } from '../components/organisms/lp/Concept'
-import { Features } from '../components/organisms/lp/Features'
-import { Footer } from '../components/organisms/lp/Footer'
 import { Header } from '../components/organisms/lp/Header'
 import { RootHero } from '../components/organisms/lp/Hero'
+import { Services } from '../components/organisms/lp/Services'
 
 export const Home = (): JSX.Element => {
   const router = useRouter()
@@ -28,9 +27,8 @@ export const Home = (): JSX.Element => {
       <Header />
       <RootHero />
       <Concept />
-      <Features />
+      <Services />
       <Artworks />
-      <Footer />
     </FadeInOut>
   )
 }

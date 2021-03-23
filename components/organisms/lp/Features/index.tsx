@@ -2,7 +2,7 @@ import { i18n } from '../../../../public/i18n'
 import { useRouter } from 'next/router'
 import { Section } from '../../../atoms/Section'
 import { Txt } from '../../../atoms/Txt'
-import { TwoColumn } from '../../..//molecules/TwoColumn'
+import { DefaultTwoColumn } from '../../..//molecules/TwoColumn'
 
 export const Features = (): JSX.Element => {
   const router = useRouter()
@@ -18,20 +18,20 @@ export const Features = (): JSX.Element => {
       <Txt tag="h2" size="xl" weight="bold" font="sans" position="center">
         Why join Artaku
       </Txt>
-      <TwoColumn
+      <DefaultTwoColumn
         src={srcs[0]}
         title={i18n[locale][category].sections[0].title}
         values={i18n[locale][category].sections[0].values}
         isReversed
         className="mt-10"
       />
-      <TwoColumn
+      <DefaultTwoColumn
         src={srcs[1]}
         title={i18n[locale][category].sections[1].title}
         values={i18n[locale][category].sections[1].values}
         className="mt-16"
       />
-      <TwoColumn
+      <DefaultTwoColumn
         src={srcs[2]}
         title={i18n[locale][category].sections[2].title}
         values={i18n[locale][category].sections[2].values}

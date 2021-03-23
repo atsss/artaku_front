@@ -5,13 +5,14 @@ import { Txt, SubTxt } from '../../atoms/Txt'
 
 export interface Props {
   src: string
-  title: string
-  values: [string]
+  children?: React.ReactNode
+  title?: string
+  values?: [string]
   isReversed?: boolean
   className?: string
 }
 
-export const TwoColumn: React.FC<Props> = ({
+export const DefaultTwoColumn: React.FC<Props> = ({
   src,
   title,
   values,
@@ -41,3 +42,21 @@ const List = ({ children }) => (
     <SubTxt tag="span">{children}</SubTxt>
   </div>
 )
+
+export const TwoColumn: React.FC<Props> = ({
+  src,
+  children,
+  isReversed,
+  className,
+}) => {
+  return (
+    <Section className={className}>
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 grid-flow-row-dense">
+        <div className={isReversed ? style.reversed : ''}>
+          <Image src={src} width={1600} height={900} />
+        </div>
+        <div>{children}</div>
+      </div>
+    </Section>
+  )
+}

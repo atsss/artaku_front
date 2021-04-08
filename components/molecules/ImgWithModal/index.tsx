@@ -28,7 +28,7 @@ export const ImgWithModal: React.FC<Props> = ({
     <div className={className} onClick={open}>
       <Image src={src} width={width} height={height} />
       <Modal open={isOpen} onClose={close} onTop={onTop} onButtom={onButtom}>
-        <Image src={src} width={width * 1.5} height={height * 1.5} />
+        <Image src={src} width={width * 0.8} height={height * 0.8} />
       </Modal>
     </div>
   )

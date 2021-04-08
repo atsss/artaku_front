@@ -12,8 +12,8 @@ interface Props {
 }
 
 export const ImgWithModal: React.FC<Props> = ({
-  width = 800,
-  height = 450,
+  width = 1600,
+  height = 900,
   src,
   onTop = null,
   onButtom = null,

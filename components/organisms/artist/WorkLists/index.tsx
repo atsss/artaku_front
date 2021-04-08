@@ -11,7 +11,7 @@ export interface Props {
 
 const List = ({ slug, work }) => (
   <li>
-    <Link href={`/artist/${slug}/works/${work.id}`}>
+    <Link href={`/${slug}/works/${work.id}`}>
       <a>
         <WorkList
           src={work.thumbnailUrl}

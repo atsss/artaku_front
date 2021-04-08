@@ -17,10 +17,10 @@ export const Navigation: React.FC<Props> = ({ user }) => (
       {/*   <Link href={`/artist/${user.slug}`}>Home</Link> */}
       {/* </Txt> */}
       <Txt size="s" font="sans" className="mt-2">
-        <Link href={`/artist/${user.slug}/about`}>About</Link>
+        <Link href={`/${user.slug}`}>About</Link>
       </Txt>
       <Txt size="s" font="sans" className="mt-2 ml-6 md:ml-0">
-        <Link href={`/artist/${user.slug}/works`}>Works</Link>
+        <Link href={`/${user.slug}/works`}>Works</Link>
       </Txt>
       {/* <Txt size="s" font="sans" className="mt-2"> */}
       {/*   <Link href={`/artist/${user.slug}/events`}>Events</Link> */}

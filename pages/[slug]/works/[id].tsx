@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { useQuery } from '@apollo/client'
-import { Loading } from '../../../../components/atoms/Loading'
-import { Layout } from '../../../../components/organisms/artist/Layout'
-import { ProcessLists } from '../../../../components/organisms/artist/ProcessLists'
-import { WorkSummary } from '../../../../components/organisms/artist/WorkSummary'
-import { GET_ARTWORK } from '../../../../graphqls/queries'
+import { Loading } from '../../../components/atoms/Loading'
+import { Layout } from '../../../components/organisms/artist/Layout'
+import { ProcessLists } from '../../../components/organisms/artist/ProcessLists'
+import { WorkSummary } from '../../../components/organisms/artist/WorkSummary'
+import { GET_ARTWORK } from '../../../graphqls/queries'
 
 const WorkShow = () => {
   const router = useRouter()

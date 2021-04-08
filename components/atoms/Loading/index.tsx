@@ -1,20 +1,26 @@
 import { motion } from 'framer-motion'
+import { SubTxt } from '../Txt'
 import style from './style.module.sass'
 
 export const Loading = (): JSX.Element => (
   <div className={style.main}>
-    <div className={style.block}>
-      {[...Array(3)].map((_, index) => (
-        <motion.span
-          key={index}
-          style={ballStyle}
-          transition={bounceTransition(index)}
-          animate={{
-            y: ['100%', '-100%', '100%'],
-            backgroundColor: ['#918F8F', '#464545', '#918F8F'],
-          }}
-        />
-      ))}
+    <div className="m-auto">
+      <div className={style.block}>
+        {[...Array(3)].map((_, index) => (
+          <motion.span
+            key={index}
+            style={ballStyle}
+            transition={bounceTransition(index)}
+            animate={{
+              y: ['100%', '-100%', '100%'],
+              backgroundColor: ['#918F8F', '#464545', '#918F8F'],
+            }}
+          />
+        ))}
+      </div>
+      <SubTxt className="block mt-8">
+        It might take time becuase the server is waking up now zzZZ
+      </SubTxt>
     </div>
   </div>
 )

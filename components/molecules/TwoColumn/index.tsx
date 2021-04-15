@@ -7,7 +7,7 @@ export interface Props {
   src: string
   children?: React.ReactNode
   title?: string
-  values?: [string]
+  values?: string[]
   isReversed?: boolean
   className?: string
 }

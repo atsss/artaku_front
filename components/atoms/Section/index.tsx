@@ -21,7 +21,7 @@ export const Section: React.FC<Props> = ({
   const backgroundImage = image
     ? {
         backgroundImage: `url(${image})`,
-        backgroundColor: 'rgba(255,255,255,0.4)',
+        backgroundColor: 'rgba(255,255,255,0.63)',
         backgroundBlendMode: 'overlay',
         backgroundPosition: 'top',
       }

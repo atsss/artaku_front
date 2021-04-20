@@ -1,30 +1,30 @@
-import { useMutation } from '@apollo/client'
+// import { useMutation } from '@apollo/client'
 import { Section } from '../../../atoms/Section'
-import { Txt, SubTxt } from '../../../atoms/Txt'
+import { SubTxt } from '../../../atoms/Txt'
 import { Youtube } from '../../../atoms/Youtube'
 import { ImgWithModal } from '../../../molecules/ImgWithModal'
 import { Process } from '../../../../interfaces'
-import { UPDATE_WALL } from '../../../../graphqls/mutations'
-import { GET_WALL } from '../../../../graphqls/queries'
+// import { UPDATE_WALL } from '../../../../graphqls/mutations'
+// import { GET_WALL } from '../../../../graphqls/queries'
 
 export interface Props {
   processes: Process[]
 }
 
 const ImageList = ({ imageUrl }) => {
-  const [updateWall] = useMutation(UPDATE_WALL, {
-    update: (cache, { data: { updatedWall } }) => {
-      cache.writeQuery({
-        query: GET_WALL,
-        data: { wall: updatedWall },
-      })
-    },
-    variables: { id: 1, contentUrl: imageUrl }, // FIXME: make id dynamic
-  })
+  // const [updateWall] = useMutation(UPDATE_WALL, {
+  //   update: (cache, { data: { updatedWall } }) => {
+  //     cache.writeQuery({
+  //       query: GET_WALL,
+  //       data: { wall: updatedWall },
+  //     })
+  //   },
+  //   variables: { id: 1, contentUrl: imageUrl }, // FIXME: make id dynamic
+  // })
 
   return (
     <div className="mt-8">
-      <ImgWithModal src={imageUrl} onTop={updateWall} />
+      <ImgWithModal src={imageUrl} />
     </div>
   )
 }
@@ -33,9 +33,6 @@ export const ProcessLists: React.FC<Props> = ({ processes }) => (
   <>
     {processes.map((pro) => (
       <Section key={pro.id} className="mt-16" isGray>
-        <Txt tag="h3" font="sans">
-          {pro.doneAt}
-        </Txt>
         {pro.summaryVideoId && (
           <Youtube id={pro.summaryVideoId} className="mt-4" />
         )}

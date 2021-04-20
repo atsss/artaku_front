@@ -25,7 +25,7 @@ const List = ({ slug, work }) => (
 
 export const WorkLists: React.FC<Props> = ({ slug, works }) => (
   <Section isGray>
-    <ul className="grid md:grid-cols-4  grid-cols-2 gap-4">
+    <ul className="grid md:grid-cols-3  grid-cols-2 gap-4">
       {works.map((work) => (
         <List key={work.id} slug={slug} work={work} />
       ))}

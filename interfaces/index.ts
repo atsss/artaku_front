@@ -12,9 +12,7 @@ export interface Artwork {
   title: string
   thumbnailUrl: string
   description: string
-  size: string
-  paintingMethod: string
-  completedAt: string
+  completedDate: string
   processes?: Process[]
 }
 

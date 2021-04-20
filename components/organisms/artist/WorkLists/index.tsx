@@ -16,7 +16,7 @@ const List = ({ slug, work }) => (
         <WorkList
           src={work.thumbnailUrl}
           title={work.title}
-          material={work.paintingMethod}
+          completedDate={work.completedDate}
         />
       </a>
     </Link>

@@ -13,9 +13,7 @@ export const GET_ARTIST = gql`
         title
         thumbnailUrl
         description
-        size
-        paintingMethod
-        completedAt
+        completedDate
       }
     }
   }
@@ -28,9 +26,7 @@ export const GET_ARTWORK = gql`
       title
       thumbnailUrl
       description
-      size
-      paintingMethod
-      completedAt
+      completedDate
       author {
         name
         slug

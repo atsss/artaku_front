@@ -4,17 +4,17 @@ import { Txt, SubTxt } from '../../atoms/Txt'
 export interface Props {
   src: string
   title: string
-  material: string
+  completedDate: string
 }
 
-export const WorkList: React.FC<Props> = ({ src, title, material }) => (
+export const WorkList: React.FC<Props> = ({ src, title, completedDate }) => (
   <>
     <Image src={src} width={600} height={400} />
     <Txt size="s" font="sans">
       {title}
     </Txt>
     <SubTxt size="s" font="sans">
-      {material}
+      {completedDate}
     </SubTxt>
   </>
 )

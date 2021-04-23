@@ -2,7 +2,7 @@
 import { Section } from '../../../atoms/Section'
 import { Txt, SubTxt } from '../../../atoms/Txt'
 import { ImgWithModal } from '../../../molecules/ImgWithModal'
-import { Artwork } from '../../../../interfaces'
+import { Artwork, Reference } from '../../../../interfaces'
 // import { UPDATE_WALL } from '../../../../graphqls/mutations'
 // import { GET_WALL } from '../../../../graphqls/queries'
 
@@ -31,6 +31,26 @@ export const WorkSummary: React.FC<Props> = ({ work }) => {
         <ImgWithModal src={work.thumbnailUrl} />
       </div>
       <Txt className="mt-8">{work.description}</Txt>
+      {work.references && <Links references={work.references} />}
     </Section>
   )
 }
+
+interface LinksProp {
+  references: Reference[]
+}
+
+const Links: React.FC<LinksProp> = ({ references }) => (
+  <div className="mt-8 flex">
+    {references.map((reference, index) => (
+      <SubTxt
+        key={reference.id}
+        className={`underline ${index === 0 ? '' : 'ml-4'}`}
+      >
+        <a href={reference.url} target="_blank" rel="noreferrer">
+          {reference.kind}
+        </a>
+      </SubTxt>
+    ))}
+  </div>
+)

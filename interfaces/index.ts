@@ -14,6 +14,7 @@ export interface Artwork {
   description: string
   completedDate: string
   processes?: Process[]
+  references?: Reference[]
 }
 
 export interface Process {
@@ -23,4 +24,11 @@ export interface Process {
   imageUrls?: string[]
   videoIds?: string[]
   doneAt: string
+}
+
+export interface Reference {
+  id: number
+  kind?: string
+  url: string
+  descriptions?: string
 }

@@ -39,6 +39,11 @@ export const GET_ARTWORK = gql`
         imageUrls
         doneAt
       }
+      references {
+        id
+        kind
+        url
+      }
     }
   }
 `

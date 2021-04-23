@@ -26,10 +26,14 @@ export const Layout: React.FC<Props> = ({ user, metaData, children }) => (
       )}
     </Head>
     <div className="md:flex block">
-      <aside className="md:w-1/4 w-full p-6">
+      <aside className="md:w-1/4 w-full md:p-12 p-4">
         <Navigation user={user} />
       </aside>
-      <main className={[style.main, 'md:w-3/4', 'w-full', 'p-6'].join(' ')}>
+      <main
+        className={[style.main, 'md:w-3/4', 'w-full', 'md:p-12', 'p-4'].join(
+          ' '
+        )}
+      >
         {children}
       </main>
     </div>

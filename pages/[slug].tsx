@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { useQuery } from '@apollo/client'
 import { Loading } from '../components/atoms/Loading'
 import { Section } from '../components/atoms/Section'
 import { Txt } from '../components/atoms/Txt'
 import { Layout } from '../components/organisms/artist/Layout'
+import { ProfileSummary } from '../components/organisms/artist/ProfileSummary'
 import { GET_ARTIST } from '../graphqls/queries'
 
 const About = () => {
@@ -22,10 +22,8 @@ const About = () => {
 
   return (
     <Layout user={user} metaData={metaData(user)}>
+      <ProfileSummary user={user} />
       <Section isGray>
-        <div className="flex justify-center">
-          <Image src={user.imageUrl} width={500} height={500} />
-        </div>
         {user.descriptions &&
           user.descriptions.map((description, index) => (
             <Txt key={index} font="serif" className="mt-4">

@@ -8,6 +8,11 @@ export const GET_ARTIST = gql`
       name
       descriptions
       imageUrl
+      linkedinUrl
+      githubUrl
+      twitterUrl
+      facebookUrl
+      instagramUrl
       artworks {
         id
         title

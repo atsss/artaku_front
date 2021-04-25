@@ -5,6 +5,7 @@ export interface User {
   imageUrl: string
   descriptions: string[]
   artworks?: Artwork[]
+  articles?: Article[]
 }
 
 export interface Artwork {
@@ -31,4 +32,12 @@ export interface Reference {
   kind?: string
   url: string
   descriptions?: string
+}
+
+export interface Article {
+  id: number
+  title: string
+  description: string
+  url: string
+  publishedDate: string
 }

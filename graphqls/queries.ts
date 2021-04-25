@@ -15,6 +15,13 @@ export const GET_ARTIST = gql`
         description
         completedDate
       }
+      articles {
+        id
+        title
+        description
+        url
+        publishedDate
+      }
     }
   }
 `

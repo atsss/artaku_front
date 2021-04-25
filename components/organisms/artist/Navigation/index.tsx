@@ -18,6 +18,9 @@ export const Navigation: React.FC<Props> = ({ user }) => (
       <Txt size="s" font="sans" className="mt-2 ml-6 md:ml-0">
         <Link href={`/${user.slug}/works`}>Works</Link>
       </Txt>
+      <Txt size="s" font="sans" className="mt-2 ml-6 md:ml-0">
+        <Link href={`/${user.slug}/articles`}>Articles</Link>
+      </Txt>
     </nav>
   </>
 )

@@ -22,7 +22,7 @@ export const Loading = (): JSX.Element => (
           ))}
         </div>
         <SubTxt className="block mt-8">
-          It might take time becuase the server is waking up now zzZZ
+          It takes time becuase the server is waking up now 💤
         </SubTxt>
       </div>
     </div>

@@ -8,6 +8,7 @@ import {
   FaTwitterSquare,
   FaFacebookSquare,
   FaInstagramSquare,
+  FaMedium,
 } from 'react-icons/fa'
 
 export interface Props {
@@ -70,6 +71,16 @@ export const ProfileSummary: React.FC<Props> = ({ user }) => (
               rel="noreferrer"
             >
               <FaInstagramSquare size="2rem" />
+            </a>
+          )}
+          {user.mediumUrl && (
+            <a
+              href={user.mediumUrl}
+              className="ml-4 mb-4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaMedium size="2rem" />
             </a>
           )}
         </div>

@@ -3,11 +3,12 @@ export interface User {
   slug: string
   name: string
   imageUrl: string
-  linkedinUrl: string
-  githubUrl: string
-  twitterUrl: string
-  facebookUrl: string
-  instagramUrl: string
+  linkedinUrl?: string
+  githubUrl?: string
+  twitterUrl?: string
+  facebookUrl?: string
+  instagramUrl?: string
+  mediumUrl?: string
   descriptions: string[]
   artworks?: Artwork[]
   articles?: Article[]

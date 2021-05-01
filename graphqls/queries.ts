@@ -13,6 +13,7 @@ export const GET_ARTIST = gql`
       twitterUrl
       facebookUrl
       instagramUrl
+      mediumUrl
       artworks {
         id
         title
